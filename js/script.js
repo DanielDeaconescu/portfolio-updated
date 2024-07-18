@@ -1,6 +1,6 @@
 "use strict";
 
-const socialLinks = document.querySelector(".social");
+const socialLinks = document.querySelector(".social-links");
 const allCards = document.querySelectorAll(".card");
 const portfolioSection = document.querySelector(".portfolio");
 const overlay = document.querySelector(".my_overlay");
@@ -28,7 +28,9 @@ document.addEventListener("DOMContentLoaded", runTypingEffect);
 const opacityChanger = function (e) {
   if (e.target.classList.contains("social-link")) {
     const link = e.target;
-    const siblings = link.closest(".social").querySelectorAll(".social-link");
+    const siblings = link
+      .closest(".social-links")
+      .querySelectorAll(".social-link");
     siblings.forEach((el) => {
       if (el !== link) el.style.opacity = this;
     });
@@ -62,6 +64,18 @@ const displayModal = function (givenObject) {
         </div>`;
   portfolioSection.insertAdjacentHTML("beforeend", itemToInsert);
   overlay.classList.remove("display-none");
+
+  const modals = document.querySelectorAll(".my_modal");
+  modals.forEach((modal) =>
+    modal.scrollIntoView({ behavior: "smooth", block: "center" })
+  );
+};
+
+const closeModal = function () {
+  document.querySelectorAll(".my_modal").forEach((item) => {
+    item.classList.add("display-none");
+  });
+  overlay.classList.add("display-none");
 };
 
 // displayModal("project2-multi-step-form.jpg", "Hello there", "Hello again");
@@ -89,11 +103,20 @@ const project3 = {
     'The "E-commerce Product Page" project, developed with HTML, CSS, and JavaScript, showcases products in an appealing and interactive manner. It features responsive design, intuitive navigation, and dynamic elements such as image carousels and customer reviews. This project ensures an engaging shopping experience, optimizing performance across various devices and browsers.',
 };
 
+const projects = {
+  project1: project1,
+  project2: project2,
+  project3: project3,
+};
+
 // displayModal(project3);
 
 rowProjects.addEventListener("click", function (e) {
   const clickedCard = e.target.closest(".card").dataset.project;
+  // console.log(clickedCard);
   const inputDisplay = "project" + clickedCard;
-  console.log(inputDisplay);
-  displayModal(inputDisplay);
+  const dynamicObject = projects[inputDisplay];
+  displayModal(dynamicObject);
 });
+
+overlay.addEventListener("click", closeModal);

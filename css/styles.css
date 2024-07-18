@@ -22,20 +22,17 @@
   font-family: "Roboto", sans-serif;
 }
 
-.header .social {
-  bottom: 50px;
-}
-
 .about-img {
   width: 200px;
 }
 
-.social a {
+.col-md-4 a {
   text-decoration: none;
   font-weight: 700;
   background-color: #1d3e53;
   color: #f4f4f4;
   transition: all 0.4s ease;
+  white-space: nowrap;
 }
 
 .project:hover {
@@ -98,6 +95,11 @@
   z-index: 11;
 }
 
+.custom-btn {
+  color: #fff;
+  border: 1px solid #fff;
+}
+
 @media (max-width: 767px) {
   .header .roles {
     font-size: 18px !important;
@@ -113,5 +115,14 @@
     margin-bottom: 40px;
     border-bottom: var(--bs-dark) solid 1px;
     padding-bottom: 20px;
+  }
+  .social-links-row {
+    display: flex;
+    gap: 0.5rem;
+  }
+  .social-links-row a {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
   }
 }
