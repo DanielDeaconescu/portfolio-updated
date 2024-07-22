@@ -1,8 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  // size variables for margins/padding
+  --size-100: 0.625rem;
+  --size-150: 0.9375rem;
+  --size-200: 1.25rem;
+  --size-250: 1.875rem;
+  --size-300: 1.875rem;
+  --size-400: 2.5rem;
+  --size-500: 3.125rem;
+  --size-600: 3.75rem;
+  --size-700: 4.375rem;
+
+  // size var for font-size
+  --fs-100: 0.625rem;
+  --fs-160: 1rem;
+  --fs-200: 1.25rem;
+  --fs-300: 1.875rem;
+}
+
+// Navigation
+
+.my_navigation {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--size-300);
+  background-color: #070f2b;
+  position: relative;
+  // height: 70px;
+}
+
+.sticky_navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav_logo {
+  color: #fff;
+}
+
+.nav_list {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin: 0;
+}
+
+.nav_list-item {
+  list-style-type: none;
+}
+
+.nav_list-link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.nav_list-link:hover {
+  color: #77abb7;
+}
+
+.nav_burger_menu {
+  display: none;
+}
+
+.custom-icon {
+  color: #fff;
+  font-size: 30px;
+}
+
+// Header
 .header {
   background: #151515 url("../images/header-background.jpg") no-repeat center
     center;
   background-size: cover;
   background-attachment: fixed;
+  margin-top: 84px;
 }
 
 .header::after {
@@ -27,6 +107,8 @@
 .about-img {
   width: 200px;
 }
+
+// social links in the hero section
 
 .col-md-4 a {
   text-decoration: none;
@@ -86,22 +168,100 @@
   z-index: 10;
 }
 
+.closing_btn {
+  position: absolute;
+  top: var(--size-200);
+  right: var(--size-200);
+  z-index: 11;
+  color: #000;
+}
+
+.closing_btn:hover {
+  cursor: pointer;
+}
+
 .display-none {
   display: none;
 }
+
+// styling the modals
 
 .my_modal {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  border-radius: var(--size-200);
+  padding: var(--size-500);
   z-index: 11;
+  max-width: 600px;
+}
+
+.modal_image {
+  padding-top: var(--size-100);
+}
+
+.modal_image_inner {
+  border-radius: var(--size-200);
+}
+
+.modal_title {
+  padding-top: var(--size-200);
+}
+
+.modal_action {
+  display: flex;
+  justify-content: center;
+  padding-top: var(--size-200);
+  gap: var(--size-100);
+}
+
+.modal_paragraph {
+  padding-top: var(--size-200);
 }
 
 .custom-btn {
   color: #fff;
   border: 1px solid #fff;
 }
+
+// technicak skills
+
+.tech-skill-icon {
+  font-size: var(--size-300);
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+}
+
+.tech-item span {
+  padding-left: 20px;
+}
+
+.tech-skills {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-200);
+}
+
+.view-resume-btn {
+  transition: all 0.3s ease-in-out;
+}
+
+.download-resume-btn {
+  background-color: #1d3e53 !important;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.download-resume-btn:hover {
+  background-color: #000 !important;
+  color: #fff;
+}
+
+// Media Queries
 
 @media (max-width: 767px) {
   .header .roles {
@@ -132,5 +292,48 @@
     display: flex;
     flex-direction: column;
     gap: 40px;
+  }
+
+  // styling the navigation
+  // making the burger menu appear
+  .nav_list {
+    position: absolute;
+    top: var(--size-700);
+    left: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: #070f2b;
+    color: #fff;
+    gap: 0;
+    overflow: hidden;
+    z-index: 100;
+    padding: 0;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .nav_list-item {
+    padding: 20px;
+    width: 100%;
+  }
+
+  .nav_list-item:hover {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+  }
+
+  .nav_list-item:hover .nav_list-link {
+    color: #000;
+  }
+
+  .nav_burger_menu {
+    display: flex;
+  }
+
+  .nav_burger_menu:hover {
+    cursor: pointer;
   }
 }

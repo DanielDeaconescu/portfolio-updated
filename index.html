@@ -29,6 +29,31 @@
     <title>Daniel Deaconescu | Web Developer</title>
   </head>
   <body>
+    <!-- navigation -->
+    <nav class="my_navigation sticky_navigation">
+      <div class="nav_logo">Daniel Dev</div>
+      <ul class="nav_list">
+        <li class="nav_list-item">
+          <a class="nav_list-link" href="#about">About me</a>
+        </li>
+        <li class="nav_list-item">
+          <a class="nav_list-link" href="#tech-skills">My skills</a>
+        </li>
+        <li class="nav_list-item">
+          <a class="nav_list-link" href="#my-work">My work</a>
+        </li>
+        <li class="nav_list-item">
+          <a class="nav_list-link" href="#">Dev Blog</a>
+        </li>
+        <li class="nav_list-item">
+          <a class="nav_list-link" href="#">Contact</a>
+        </li>
+      </ul>
+
+      <div class="nav_burger_menu">
+        <i class="fa-solid fa-bars custom-icon"></i>
+      </div>
+    </nav>
     <header class="header vh-100 text-center position-relative">
       <div
         class="text-container position-relative d-flex flex-column justify-content-evenly align-items-center h-100"
@@ -101,7 +126,7 @@
     </section>
 
     <!-- Profile & skills -->
-    <section class="profile my-6">
+    <section id="tech-skills" class="profile my-6">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -140,36 +165,46 @@
 
           <div class="col-md-6">
             <h3 class="text-uppercase fw-bold">Technical Skills</h3>
-            <p>
-              Here is a list of my skills with these dumb percentages that don't
-              mean anything
-            </p>
+            <p>The technologies I know how to work with.</p>
 
             <div class="tech-skills">
               <!-- HTML -->
               <div class="tech-item">
-                <i class="devicon-html5-plain"></i>
+                <i class="devicon-html5-plain tech-skill-icon text-primary"></i>
                 <span>HTML5</span>
               </div>
               <!-- CSS -->
               <div class="tech-item">
-                <i class="devicon-css3-plain"></i>
+                <i class="devicon-css3-plain tech-skill-icon text-primary"></i>
                 <span>CSS</span>
+              </div>
+
+              <!-- SASS -->
+              <div class="tech-item">
+                <i
+                  class="devicon-sass-original tech-skill-icon text-primary"
+                ></i>
+                <span>SASS</span>
               </div>
               <!-- JavaScript -->
               <div class="tech-item">
-                <i class="devicon-javascript-plain"></i>
+                <i
+                  class="devicon-javascript-plain tech-skill-icon text-primary"
+                ></i>
                 <span>JavaScript</span>
               </div>
               <!-- Bootstrap -->
               <div class="tech-item">
-                <img
-                  src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
-                />
-
+                <i
+                  class="devicon-bootstrap-plain tech-skill-icon text-primary"
+                ></i>
                 <span>Bootstrap</span>
               </div>
               <!-- PHP -->
+              <div class="tech-item">
+                <i class="devicon-php-plain tech-skill-icon text-primary"></i>
+                <span>PHP</span>
+              </div>
               <!-- Python -->
               <!-- UI/UX -->
             </div>
@@ -177,15 +212,43 @@
         </div>
         <div class="row mt-5 text-center">
           <div class="col-12">
+            <!-- link to the digital resume -->
             <a
-              href="#"
-              class="btn btn-outline-dark btn-lg text-uppercase px-5 mx-3 my-2"
-              >Hire Me Now</a
+              href="../digital_resume/index.html"
+              class="btn btn-outline-secondary btn-lg text-uppercase px-5 mx-3 my-2 view-resume-btn"
+              target="_blank"
+              >View Digital Resume</a
             >
+            <!-- Download resume -->
             <a
-              href="#"
-              class="btn btn-dark btn-lg text-uppercase px-5 mx-3 my-2"
-              >Download CV</a
+              href="../digital_resume/assets/resume_Daniel_Deaconescu.pdf"
+              class="btn btn-lg text-uppercase px-5 mx-3 my-2 download-resume-btn"
+              target="_blank"
+              download="resume_Daniel_Deaconescu.pdf"
+              >Download Resume</a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tabbed component for the tech stack  -->
+    <section class="styleshout text-bg-dark bg-gradient p-6 text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h1>Further info regarding my abilities</h1>
+            <hr class="w-25 mx-auto" />
+            <p class="lead mb-5">
+              Styleshout is a place for Free HTML5 Templates and Free Wordpress.
+              This design was inspired by one of their templates. Check them out
+              for templates to use and get inspiration from.
+            </p>
+            <a
+              href="https://styleshout.com"
+              target="_blank"
+              class="btn btn-primary btn-lg text-uppercase px-5 mx-3 my-2"
+              >Visit Styleshout</a
             >
           </div>
         </div>
@@ -193,13 +256,14 @@
     </section>
 
     <!-- portfolio content -->
-    <section class="portfolio py-5 bg-light position-relative">
-      <div class="container">
+    <section id="my-work" class="portfolio py-5 bg-light position-relative">
+      <div class="container position-relative">
         <div class="text-center mb-5">
-          <h4 class="text-uppercase fw-bold text-primary">Portfolio</h4>
+          <h4 class="text-uppercase fw-bold text-primary">My work</h4>
           <hr class="w-25 mx-auto" />
-          <h2 class="mb-4">Check Out My Work</h2>
-          <p class="lead">Here is a small sample of my projects.</p>
+          <h2 class="mb-4">
+            Here you can see some of my faviourite projects to work on
+          </h2>
         </div>
         <div class="row row_projects">
           <!-- project 1 -->
@@ -257,49 +321,129 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="my_overlay display-none"></div>
-    </section>
 
-    <!-- Styleshout -->
-    <section class="styleshout text-bg-dark bg-gradient p-6 text-center">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <h1>Shoutout to StyleShout</h1>
-            <hr class="w-25 mx-auto" />
-            <p class="lead mb-5">
-              Styleshout is a place for Free HTML5 Templates and Free Wordpress.
-              This design was inspired by one of their templates. Check them out
-              for templates to use and get inspiration from.
-            </p>
-            <a
-              href="https://styleshout.com"
-              target="_blank"
-              class="btn btn-primary btn-lg text-uppercase px-5 mx-3 my-2"
-              >Visit Styleshout</a
-            >
+        <div class="modals_container">
+          <!-- project 1 - Vera -->
+          <div
+            class="my_modal project-1 text-start bg-light display-none"
+            data-modal="1"
+          >
+            <div class="closing_btn">
+              <i class="fa-solid fa-2x fa-xmark"></i>
+            </div>
+            <div class="modal_image">
+              <img
+                class="img-fluid modal_image_inner"
+                src="./images/projects/project1-vera.jpg"
+                alt=""
+              />
+            </div>
+            <div class="modal_info">
+              <h3 class="modal_title text-center">Vera Landing Page</h3>
+              <p class="modal_paragraph px-4">
+                The landing page "Vera" was crafted with HTML, CSS, and
+                JavaScript, offering a sleek, modern design. It features
+                responsive layouts, interactive elements, and dynamic content.
+                "Vera" seamlessly blends aesthetics with functionality, ensuring
+                a captivating user experience while maintaining optimal
+                performance across all devices and browsers.
+              </p>
+            </div>
+            <div class="modal_action">
+              <a href="#" class="btn btn-primary">Project Preview</a>
+              <a href="#" class="btn btn-secondary">GitHub Repo</a>
+            </div>
+          </div>
+
+          <!-- project 2 - Multi step form -->
+
+          <div
+            class="my_modal project-1 text-start bg-light display-none"
+            data-modal="2"
+          >
+            <div class="closing_btn">
+              <i class="fa-solid fa-2x fa-xmark"></i>
+            </div>
+            <div class="modal_image">
+              <img
+                class="img-fluid modal_image_inner"
+                src="/images/projects/project2-multi-step-form.jpg"
+                alt=""
+              />
+            </div>
+            <div class="modal_info">
+              <h3 class="modal_title text-center">Multi-step Form</h3>
+              <p class="modal_paragraph px-4">
+                The "Multi-step form" project, built using HTML, CSS, and
+                JavaScript, provides a user-friendly, interactive experience. It
+                guides users through a series of steps with smooth transitions
+                and real-time validations. Designed with a focus on usability
+                and responsiveness, the form ensures seamless data entry and
+                enhances user engagement across all devices.
+              </p>
+            </div>
+            <div class="modal_action">
+              <a href="#" class="btn btn-primary">Project Preview</a>
+              <a href="#" class="btn btn-secondary">GitHub Repo</a>
+            </div>
+          </div>
+
+          <!-- project 2 - E-commerce product page -->
+
+          <div
+            class="my_modal project-1 text-start bg-light display-none"
+            data-modal="3"
+          >
+            <div class="closing_btn">
+              <i class="fa-solid fa-2x fa-xmark"></i>
+            </div>
+            <div class="modal_image">
+              <img
+                class="img-fluid modal_image_inner"
+                src="/images/projects/project3-ecommerce-product-page.jpg"
+                alt=""
+              />
+            </div>
+            <div class="modal_info">
+              <h3 class="modal_title text-center">E-commerce Product Page</h3>
+              <p class="modal_paragraph px-4">
+                The "E-commerce Product Page" project, developed with HTML, CSS,
+                and JavaScript, showcases products in an appealing and
+                interactive manner. It features responsive design, intuitive
+                navigation, and dynamic elements such as image carousels and
+                customer reviews. This project ensures an engaging shopping
+                experience, optimizing performance across various devices and
+                browsers.
+              </p>
+            </div>
+            <div class="modal_action">
+              <a href="#" class="btn btn-primary">Project Preview</a>
+              <a href="#" class="btn btn-secondary">GitHub Repo</a>
+            </div>
           </div>
         </div>
       </div>
+
+      <div class="my_overlay display-none"></div>
     </section>
 
     <!-- Services -->
     <section class="services text-bg-dark py-5 position-relative">
       <div class="container position-relative">
         <div class="text-center mb-5">
-          <h4 class="text-uppercase fw-bold text-primary">Services</h4>
+          <h4 class="text-uppercase fw-bold text-primary">
+            My Learning Journey
+          </h4>
           <hr class="w-25 mx-auto" />
-          <h2 class="mb-4">What can I do for you?</h2>
+          <h2 class="mb-4">Learning new technologies</h2>
           <p class="lead">
-            Here are some of the services that I offer when it comes to web
-            development and business.
+            This is an overview of the technologies that I'm currently learning.
           </p>
         </div>
         <div class="row">
           <div class="col-md-4 text-center">
-            <i class="fas fa-globe fa-3x text-primary mb-3"></i>
-            <h3 class="fs-3">Web Design</h3>
+            <i class="fa-brands fa-3x fa-react text-primary mb-3"></i>
+            <h3 class="fs-3">React</h3>
             <hr class="w-25 mx-auto" />
             <p class="fs-5">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad iste
@@ -308,8 +452,8 @@
             </p>
           </div>
           <div class="col-md-4 text-center">
-            <i class="fas fa-code fa-3x text-primary mb-3"></i>
-            <h3 class="fs-3">Web Development</h3>
+            <i class="fa-brands fa-3x fa-php text-primary mb-3"></i>
+            <h3 class="fs-3">PHP</h3>
             <hr class="w-25 mx-auto" />
             <p class="fs-5">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad iste
