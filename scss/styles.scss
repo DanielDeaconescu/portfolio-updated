@@ -1,7 +1,65 @@
-* {
+// CSS reset
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
   margin: 0;
   padding: 0;
+}
+
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 :root {
@@ -21,18 +79,23 @@
   --fs-160: 1rem;
   --fs-200: 1.25rem;
   --fs-300: 1.875rem;
+
+  // colors
+  --clr-black: #000;
+  --clr-black-less: #151515;
+  --clr-dark-blue: #1d3e53;
+  --clr-white: #fff;
+  --clr-lightblue: #77abb7;
 }
 
 // Navigation
-
 .my_navigation {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: var(--size-300);
-  background-color: #070f2b;
+  background-color: var(--clr-black);
   position: relative;
-  // height: 70px;
 }
 
 .sticky_navigation {
@@ -44,7 +107,7 @@
 }
 
 .nav_logo {
-  color: #fff;
+  color: var(--clr-white);
 }
 
 .nav_list {
@@ -60,31 +123,34 @@
 
 .nav_list-link {
   text-decoration: none;
-  color: #fff;
+  color: var(--clr-white);
 }
 
 .nav_list-link:hover {
-  color: #77abb7;
+  color: var(--clr-lightblue);
 }
 
 .nav_burger_menu {
   display: none;
 }
 
-.custom-icon {
-  color: #fff;
+.nav_custom-icon {
+  color: var(--clr-white);
   font-size: 30px;
 }
 
-// Header
+// navigation end
+
+// header start
 .header {
-  background: #151515 url("../images/header-background.jpg") no-repeat center
-    center;
+  background: var(--clr-black-less) url("../images/header-background.jpg")
+    no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   margin-top: 84px;
 }
 
+// header overlay
 .header::after {
   content: "";
   position: absolute;
@@ -95,58 +161,119 @@
   background: rgba(0, 0, 0, 0.7);
 }
 
-.header .text-container {
+.header .header-text-container {
   z-index: 10;
 }
 
-// to be changed beacuse I don't like it
-.header .roles {
+.header .header-roles {
   font-family: "Roboto", sans-serif;
 }
 
-.about-img {
-  width: 200px;
+.custom-btn {
+  color: var(--clr-white);
+  border: 1px solid var(--clr-white);
 }
 
 // social links in the hero section
-
-.col-md-4 a {
+.social-link {
   text-decoration: none;
   font-weight: 700;
-  background-color: #1d3e53;
+  background-color: var(--clr-dark-blue);
   color: #f4f4f4;
   transition: all 0.4s ease;
   white-space: nowrap;
 }
 
-.project:hover {
-  transform: scale(1.05);
-  transition: all 0.5s ease-in-out;
-  opacity: 0.8;
+.social-link:hover {
+  color: #f4f4f4;
+}
+// header end
+
+// About Me start
+
+.about-img {
+  width: 200px;
 }
 
-.services {
-  background: url("../images/bg.jpg") no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed;
+// About Me end
+
+// Profile & technical skills start
+
+.tech-skill-icon {
+  font-size: var(--size-300);
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+}
+
+.tech-item span {
+  padding-left: 20px;
+}
+
+.tech-skills {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-200);
+}
+
+.view-resume-btn {
+  transition: all 0.3s ease-in-out;
+}
+
+.download-resume-btn {
+  background-color: var(--clr-dark-blue) !important;
+  color: var(--clr-white);
+  transition: all 0.3s ease-in-out;
+}
+
+.download-resume-btn:hover {
+  background-color: #000 !important;
+  color: var(--clr-white);
+}
+
+// Profile & technical skills end
+
+// Tabbed component start
+.tabbed-component {
+  background-color: #454545;
+  color: #fff;
+  border: 1px solid green;
+}
+
+.bootstrap-container {
   position: relative;
 }
 
-.services::after {
-  content: "";
+.tabs-container {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid var(--clr-white);
+  transform: translateY(-25%);
 }
 
-.services .container {
-  z-index: 10;
+.tab {
+  color: var(--clr-black);
+  border: 1px solid var(--clr-black);
+  background-color: var(--clr-white);
 }
 
-// portfolio
+.tab:hover {
+  color: var(--clr-black);
+}
+
+.tab_active {
+  transform: translateY(-35%);
+}
+
+.description {
+}
+
+// Tabbed component end
+
+// portfolio content start
+
 .card {
   transition: all 0.4s ease;
 }
@@ -184,7 +311,7 @@
   display: none;
 }
 
-// styling the modals
+// modals
 
 .my_modal {
   position: absolute;
@@ -220,49 +347,33 @@
   padding-top: var(--size-200);
 }
 
-.custom-btn {
-  color: #fff;
-  border: 1px solid #fff;
+// portfolio content end
+
+// learning journey start
+.currently-learning {
+  background: url("../images/bg.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
 }
 
-// technicak skills
-
-.tech-skill-icon {
-  font-size: var(--size-300);
+.currently-learning::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-.tech-item {
-  display: flex;
-  align-items: center;
+.currently-learning .container {
+  z-index: 10;
 }
 
-.tech-item span {
-  padding-left: 20px;
-}
-
-.tech-skills {
-  display: flex;
-  flex-direction: column;
-  gap: var(--size-200);
-}
-
-.view-resume-btn {
-  transition: all 0.3s ease-in-out;
-}
-
-.download-resume-btn {
-  background-color: #1d3e53 !important;
-  color: #fff;
-  transition: all 0.3s ease-in-out;
-}
-
-.download-resume-btn:hover {
-  background-color: #000 !important;
-  color: #fff;
-}
+// learning journey end
 
 // Media Queries
-
 @media (max-width: 767px) {
   .header .roles {
     font-size: 18px !important;
@@ -306,7 +417,7 @@
     flex-direction: column;
     text-align: center;
     background-color: #070f2b;
-    color: #fff;
+    color: var(--clr-white);
     gap: 0;
     overflow: hidden;
     z-index: 100;
@@ -320,7 +431,7 @@
   }
 
   .nav_list-item:hover {
-    background-color: #fff;
+    background-color: var(--clr-white);
     color: #000;
     cursor: pointer;
   }

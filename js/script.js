@@ -8,6 +8,9 @@ const rowProjects = document.querySelector(".row_projects");
 const closingBtns = document.querySelectorAll(".closing_btn");
 const navList = document.querySelector(".nav_list");
 const navBurgerBtn = document.querySelector(".nav_burger_menu");
+const allModals = document.querySelectorAll(".my_modal");
+const allTabs = document.querySelectorAll(".tab");
+const allDescriptions = document.querySelectorAll(".description");
 
 // navigation functionality
 navList.style.maxHeight = "0px";
@@ -79,8 +82,26 @@ allCards.forEach((card) => {
     openModal(clickedCard);
   });
 });
-
+// closing modal when clicking the overlay
 overlay.addEventListener("click", closeModal);
+// closing modal when clicking "X" mark
 closingBtns.forEach((closingBtn) =>
   closingBtn.addEventListener("click", closeModal)
 );
+// closing modal when hitting the "Esc" button
+document.addEventListener("keydown", function (e) {
+  // check if there is a modal open
+  allModals.forEach((modal) => {
+    if (!modal.classList.contains("display-none") && e.key === "Escape") {
+      closeModal();
+    }
+  });
+});
+
+// tabbed component functionality
+allTabs.forEach((tab) => {
+  tab.addEventListener("click", function (e) {
+    const clickedTab = e.target.dataset.tech;
+    console.log(clickedTab);
+  });
+});

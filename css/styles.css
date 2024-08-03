@@ -1,9 +1,63 @@
-* {
+/* Box sizing rules */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
   margin: 0;
   padding: 0;
 }
 
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 :root {
   --size-100: 0.625rem;
   --size-150: 0.9375rem;
@@ -18,6 +72,11 @@
   --fs-160: 1rem;
   --fs-200: 1.25rem;
   --fs-300: 1.875rem;
+  --clr-black: #000;
+  --clr-black-less: #151515;
+  --clr-dark-blue: #1d3e53;
+  --clr-white: #fff;
+  --clr-lightblue: #77abb7;
 }
 
 .my_navigation {
@@ -25,7 +84,7 @@
   align-items: center;
   justify-content: space-between;
   padding: var(--size-300);
-  background-color: #070f2b;
+  background-color: var(--clr-black);
   position: relative;
 }
 
@@ -38,7 +97,7 @@
 }
 
 .nav_logo {
-  color: #fff;
+  color: var(--clr-white);
 }
 
 .nav_list {
@@ -54,24 +113,24 @@
 
 .nav_list-link {
   text-decoration: none;
-  color: #fff;
+  color: var(--clr-white);
 }
 
 .nav_list-link:hover {
-  color: #77abb7;
+  color: var(--clr-lightblue);
 }
 
 .nav_burger_menu {
   display: none;
 }
 
-.custom-icon {
-  color: #fff;
+.nav_custom-icon {
+  color: var(--clr-white);
   font-size: 30px;
 }
 
 .header {
-  background: #151515 url("../images/header-background.jpg") no-repeat center center;
+  background: var(--clr-black-less) url("../images/header-background.jpg") no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
   margin-top: 84px;
@@ -87,52 +146,99 @@
   background: rgba(0, 0, 0, 0.7);
 }
 
-.header .text-container {
+.header .header-text-container {
   z-index: 10;
 }
 
-.header .roles {
+.header .header-roles {
   font-family: "Roboto", sans-serif;
+}
+
+.custom-btn {
+  color: var(--clr-white);
+  border: 1px solid var(--clr-white);
+}
+
+.social-link {
+  text-decoration: none;
+  font-weight: 700;
+  background-color: var(--clr-dark-blue);
+  color: #f4f4f4;
+  transition: all 0.4s ease;
+  white-space: nowrap;
+}
+
+.social-link:hover {
+  color: #f4f4f4;
 }
 
 .about-img {
   width: 200px;
 }
 
-.col-md-4 a {
-  text-decoration: none;
-  font-weight: 700;
-  background-color: #1d3e53;
-  color: #f4f4f4;
-  transition: all 0.4s ease;
-  white-space: nowrap;
+.tech-skill-icon {
+  font-size: var(--size-300);
 }
 
-.project:hover {
-  transform: scale(1.05);
-  transition: all 0.5s ease-in-out;
-  opacity: 0.8;
+.tech-item {
+  display: flex;
+  align-items: center;
 }
 
-.services {
-  background: url("../images/bg.jpg") no-repeat center center;
-  background-size: cover;
-  background-attachment: fixed;
+.tech-item span {
+  padding-left: 20px;
+}
+
+.tech-skills {
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-200);
+}
+
+.view-resume-btn {
+  transition: all 0.3s ease-in-out;
+}
+
+.download-resume-btn {
+  background-color: var(--clr-dark-blue) !important;
+  color: var(--clr-white);
+  transition: all 0.3s ease-in-out;
+}
+
+.download-resume-btn:hover {
+  background-color: #000 !important;
+  color: var(--clr-white);
+}
+
+.tabbed-component {
+  background-color: #454545;
+  color: #fff;
+  border: 1px solid green;
+}
+
+.bootstrap-container {
   position: relative;
 }
 
-.services::after {
-  content: "";
+.tabs-container {
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  border-bottom: 1px solid var(--clr-white);
+  transform: translateY(-25%);
 }
 
-.services .container {
-  z-index: 10;
+.tab {
+  color: var(--clr-black);
+  border: 1px solid var(--clr-black);
+  background-color: var(--clr-white);
+}
+
+.tab:hover {
+  color: var(--clr-black);
+}
+
+.tab_active {
+  transform: translateY(-35%);
 }
 
 .card {
@@ -206,43 +312,25 @@
   padding-top: var(--size-200);
 }
 
-.custom-btn {
-  color: #fff;
-  border: 1px solid #fff;
+.currently-learning {
+  background: url("../images/bg.jpg") no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
 }
 
-.tech-skill-icon {
-  font-size: var(--size-300);
+.currently-learning::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
-.tech-item {
-  display: flex;
-  align-items: center;
-}
-
-.tech-item span {
-  padding-left: 20px;
-}
-
-.tech-skills {
-  display: flex;
-  flex-direction: column;
-  gap: var(--size-200);
-}
-
-.view-resume-btn {
-  transition: all 0.3s ease-in-out;
-}
-
-.download-resume-btn {
-  background-color: #1d3e53 !important;
-  color: #fff;
-  transition: all 0.3s ease-in-out;
-}
-
-.download-resume-btn:hover {
-  background-color: #000 !important;
-  color: #fff;
+.currently-learning .container {
+  z-index: 10;
 }
 
 @media (max-width: 767px) {
@@ -280,7 +368,7 @@
     flex-direction: column;
     text-align: center;
     background-color: #070f2b;
-    color: #fff;
+    color: var(--clr-white);
     gap: 0;
     overflow: hidden;
     z-index: 100;
@@ -292,7 +380,7 @@
     width: 100%;
   }
   .nav_list-item:hover {
-    background-color: #fff;
+    background-color: var(--clr-white);
     color: #000;
     cursor: pointer;
   }
