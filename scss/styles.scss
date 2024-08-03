@@ -186,6 +186,7 @@ select {
 
 .social-link:hover {
   color: #f4f4f4;
+  background-color: var(--clr-dark-blue);
 }
 // header end
 
@@ -314,14 +315,18 @@ select {
 // modals
 
 .my_modal {
-  position: absolute;
-  top: 50%;
+  position: fixed;
+  top: 25%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -20%);
   border-radius: var(--size-200);
   padding: var(--size-500);
-  z-index: 11;
+  z-index: 1000;
   max-width: 600px;
+  width: 90%;
+  // max-height: 90vh;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 .modal_image {

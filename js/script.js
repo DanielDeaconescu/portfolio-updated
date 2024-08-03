@@ -11,7 +11,7 @@ const navBurgerBtn = document.querySelector(".nav_burger_menu");
 const allModals = document.querySelectorAll(".my_modal");
 const allTabs = document.querySelectorAll(".tab");
 const allDescriptions = document.querySelectorAll(".description");
-
+const body = document.querySelector("body");
 // navigation functionality
 navList.style.maxHeight = "0px";
 
@@ -65,7 +65,9 @@ const openModal = function (modalNumber) {
     `.my_modal[data-modal="${modalNumber}"]`
   );
   correspondingModal.classList.remove("display-none");
+  correspondingModal.scrollIntoView({ behavior: "smooth", block: "start" });
   overlay.classList.remove("display-none");
+  document.querySelector("body").style.overflowY = "hidden";
 };
 
 // create a function that checks which modal is currently open and returns its data-project
@@ -74,6 +76,7 @@ const closeModal = function () {
   const visibleModal = document.querySelector(".my_modal:not(.display-none)");
   visibleModal.classList.add("display-none");
   overlay.classList.add("display-none");
+  document.querySelector("body").style.overflowY = "auto";
 };
 
 allCards.forEach((card) => {
