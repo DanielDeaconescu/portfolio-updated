@@ -29,8 +29,8 @@
     <title>Daniel Deaconescu | Web Developer</title>
   </head>
   <body>
-    <!-- navigation start -->
-    <nav class="my_navigation sticky_navigation">
+    <!-- old navigation start -->
+    <!-- <nav class="my_navigation sticky_navigation">
       <div class="container">
         <div class="nav_logo">Daniel Dev</div>
         <ul class="nav_list">
@@ -54,8 +54,45 @@
           <i class="fa-solid fa-bars nav_custom-icon"></i>
         </div>
       </div>
+    </nav> -->
+    <!-- old navigation end -->
+
+    <!-- bootstrap navigation start -->
+    <nav
+      class="navbar navbar-expand-md bg-dark navbar-dark navbar-custom sticky-top"
+    >
+      <div class="container container-custom">
+        <a href="#" class="navbar-brand navbar-brand-custom">Daniel Dev</a>
+        <button
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          class="navbar-toggler"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link active link-custom">About me</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link active link-custom">My skills</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link active link-custom">My work</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link active link-custom">Dev Blog</a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link active link-custom">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
-    <!-- navigation end -->
+    <!-- bootstrap navigation end -->
 
     <!-- header start -->
     <header class="header vh-100 text-center position-relative">
@@ -63,9 +100,6 @@
         class="header-text-container position-relative d-flex flex-column justify-content-evenly align-items-center h-100"
       >
         <div>
-          <h5 class="text-primary fs-3 fw-bold text-uppercase">
-            Beautiful interfaces, functional backend.
-          </h5>
           <h1 id="typing-text" class="display-1 fw-bold text-white"></h1>
           <p class="header-roles text-white text-uppercase fs-4">
             <span>front-end developer learning back-end | </span>
@@ -234,7 +268,7 @@
           <div class="col-12">
             <!-- link to the digital resume -->
             <a
-              href="../digital_resume/index.html"
+              href="./digital_resume/index.html"
               class="btn btn-outline-secondary btn-lg text-uppercase px-5 mx-3 my-2 view-resume-btn"
               target="_blank"
               >View Digital Resume</a
@@ -491,6 +525,7 @@
               <a href="#" class="btn btn-primary">Project Preview</a>
               <a href="#" class="btn btn-secondary">GitHub Repo</a>
             </div>
+            <!-- <small>Press Esc to close</small> -->
           </div>
 
           <!-- project 2 - Multi step form -->

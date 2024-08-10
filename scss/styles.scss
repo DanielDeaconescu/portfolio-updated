@@ -86,62 +86,29 @@ select {
   --clr-dark-blue: #1d3e53;
   --clr-white: #fff;
   --clr-lightblue: #77abb7;
+  --clr-purple: #9290c3;
+
+  // font weights
+  --fw-100: 600;
 }
 
 // Navigation
-.my_navigation {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.navbar-custom {
   padding: 0;
-  margin: 0;
-  background-color: var(--clr-black);
-  // position: relative;
 }
 
-.sticky_navigation {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 100;
+.link-custom {
+  padding: 1.5rem 0;
 }
 
-.nav_logo {
-  color: var(--clr-white);
+.link-custom:hover {
+  background-color: var(--clr-white);
+  color: var(--clr-black) !important;
 }
 
-.nav_list {
-  display: flex;
-  gap: 30px;
-  align-items: center;
-  margin: 0;
+.navbar-brand-custom {
+  padding: 1.5rem 0;
 }
-
-.nav_list-item {
-  list-style-type: none;
-}
-
-.nav_list-link {
-  padding: 2rem 0;
-  text-decoration: none;
-  color: var(--clr-white);
-  display: inline-block;
-}
-
-.nav_list-link:hover {
-  color: var(--clr-lightblue);
-}
-
-.nav_burger_menu {
-  display: none;
-}
-
-.nav_custom-icon {
-  color: var(--clr-white);
-  font-size: 30px;
-}
-
 // navigation end
 
 // header start
@@ -150,7 +117,6 @@ select {
     no-repeat center center;
   background-size: cover;
   background-attachment: fixed;
-  margin-top: 84px;
 }
 
 // header overlay
@@ -242,9 +208,8 @@ select {
 // Tabbed component start
 .tabbed-component {
   padding-top: 20px;
-  background-color: #454545;
+  background-color: #1b1a55;
   color: #fff;
-  border: 1px solid green;
 }
 
 .container-descriptions {
@@ -260,23 +225,25 @@ select {
 }
 
 .tab {
-  color: var(--clr-black);
+  color: var(--clr-white);
   border: 1px solid var(--clr-black);
   background-color: var(--clr-white);
-  transition: all 0.3s ease;
   cursor: pointer;
   padding: 1rem;
   white-space: nowrap;
+  border: 0;
+  background-color: var(--clr-dark-blue);
+  transition: all 0.3s ease;
+  font-weight: var(--fw-100);
 }
 
-.tab:hover {
-  color: var(--clr-black);
-}
+// .tab:hover {
+//   color: var(--clr-black);
+// }
 
 .tab_active {
   transform: translateY(-35%);
-  background-color: #f0f0f0;
-  // transition: all 0;
+  background-color: var(--clr-lightblue);
 }
 
 .description {
@@ -405,6 +372,10 @@ select {
 }
 
 @media (max-width: 769px) {
+  .navbar-custom {
+    padding: 0;
+  }
+
   .header .roles {
     font-size: 18px !important;
   }
@@ -436,51 +407,22 @@ select {
   }
 
   // styling the navigation
-  // making the burger menu appear
-  .nav_list {
-    position: absolute;
-    top: var(--size-700);
-    left: 0;
-    right: 0;
-    width: 100%;
+  .nav-link {
     display: flex;
-    flex-direction: column;
-    text-align: center;
-    background-color: #070f2b;
-    color: var(--clr-white);
-    gap: 0;
-    overflow: hidden;
-    z-index: 100;
-    padding: 0;
-    transition: all 0.5s ease-in-out;
+    justify-content: center;
   }
 
-  .nav_list-item {
-    padding: 20px;
-    width: 100%;
-  }
-
-  .nav_list-item:hover {
-    background-color: var(--clr-white);
-    color: #000;
-    cursor: pointer;
-  }
-
-  .nav_list-item:hover .nav_list-link {
-    color: #000;
-  }
-
-  .nav_burger_menu {
-    display: flex;
-  }
-
-  .nav_burger_menu:hover {
-    cursor: pointer;
+  .container-custom {
+    max-width: 100% !important;
   }
 }
 
 @media (min-width: 770px) {
   .description-how {
     border-right: 1px solid white;
+  }
+
+  .navbar-custom {
+    padding: 0 50px;
   }
 }

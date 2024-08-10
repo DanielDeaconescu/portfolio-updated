@@ -6,22 +6,34 @@ const portfolioSection = document.querySelector(".portfolio");
 const overlay = document.querySelector(".my_overlay");
 const rowProjects = document.querySelector(".row_projects");
 const closingBtns = document.querySelectorAll(".closing_btn");
-const navList = document.querySelector(".nav_list");
-const navBurgerBtn = document.querySelector(".nav_burger_menu");
 const allModals = document.querySelectorAll(".my_modal");
 const allTabs = document.querySelectorAll(".tab");
 const allDescriptions = document.querySelectorAll(".description");
 const body = document.querySelector("body");
-// navigation functionality
-// navList.style.maxHeight = "0px";
+const header = document.querySelector(".header");
+const navigation = document.querySelector(".navbar-custom");
 
-navBurgerBtn.addEventListener("click", function () {
-  if (navList.style.maxHeight === "0px") {
-    navList.style.maxHeight = "600px";
+// navigation functionality (we display the navigation when the header is no longer in view)
+
+const navigationHeight = navigation.getBoundingClientRect().height;
+
+const makeNavbarSticky = function (entries) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) {
+    navigation.classList.add("sticky-top", "navbar-visible");
   } else {
-    navList.style.maxHeight = "0px";
+    navigation.classList.remove("sticky-top");
   }
-});
+};
+
+const options = {
+  root: null,
+  threshold: 0,
+  rootMargin: `-${navigationHeight}px`,
+};
+
+const headerObserver = new IntersectionObserver(makeNavbarSticky, options);
+headerObserver.observe(header);
 
 function runTypingEffect() {
   const text = "I am Daniel Deaconescu";
