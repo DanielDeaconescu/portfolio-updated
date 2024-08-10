@@ -13,7 +13,7 @@ const allTabs = document.querySelectorAll(".tab");
 const allDescriptions = document.querySelectorAll(".description");
 const body = document.querySelector("body");
 // navigation functionality
-navList.style.maxHeight = "0px";
+// navList.style.maxHeight = "0px";
 
 navBurgerBtn.addEventListener("click", function () {
   if (navList.style.maxHeight === "0px") {
@@ -109,5 +109,12 @@ allTabs.forEach((tab) => {
     document
       .querySelector(`.tab[data-tech="${clickedTab}"]`)
       .classList.add("tab_active");
+    // descriptions
+    allDescriptions.forEach((description) =>
+      description.classList.remove("description-active")
+    );
+    document
+      .querySelector(`.description[data-tech="${clickedTab}"]`)
+      .classList.add("description-active");
   });
 });

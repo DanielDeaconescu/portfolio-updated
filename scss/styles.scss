@@ -93,9 +93,10 @@ select {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--size-300);
+  padding: 0;
+  margin: 0;
   background-color: var(--clr-black);
-  position: relative;
+  // position: relative;
 }
 
 .sticky_navigation {
@@ -122,8 +123,10 @@ select {
 }
 
 .nav_list-link {
+  padding: 2rem 0;
   text-decoration: none;
   color: var(--clr-white);
+  display: inline-block;
 }
 
 .nav_list-link:hover {
@@ -253,10 +256,7 @@ select {
 }
 
 .tabs-container {
-  position: absolute;
-  width: 100%;
-  border-bottom: 1px solid var(--clr-white);
-  transform: translateY(-25%);
+  transform: translateY(-35%);
 }
 
 .tab {
@@ -265,6 +265,8 @@ select {
   background-color: var(--clr-white);
   transition: all 0.3s ease;
   cursor: pointer;
+  padding: 1rem;
+  white-space: nowrap;
 }
 
 .tab:hover {
@@ -279,6 +281,13 @@ select {
 
 .description {
   overflow: hidden;
+  display: none;
+  min-height: 350px;
+  padding-bottom: 3rem;
+}
+
+.description-active {
+  display: flex;
 }
 
 // Tabbed component end
@@ -389,7 +398,13 @@ select {
 // learning journey end
 
 // Media Queries
-@media (max-width: 767px) {
+@media (max-width: 577px) {
+  .description-how {
+    border-bottom: 1px solid white;
+  }
+}
+
+@media (max-width: 769px) {
   .header .roles {
     font-size: 18px !important;
   }
@@ -461,5 +476,11 @@ select {
 
   .nav_burger_menu:hover {
     cursor: pointer;
+  }
+}
+
+@media (min-width: 770px) {
+  .description-how {
+    border-right: 1px solid white;
   }
 }
