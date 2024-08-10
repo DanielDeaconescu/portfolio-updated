@@ -105,6 +105,9 @@ document.addEventListener("keydown", function (e) {
 allTabs.forEach((tab) => {
   tab.addEventListener("click", function (e) {
     const clickedTab = e.target.dataset.tech;
-    console.log(clickedTab);
+    allTabs.forEach((tab) => tab.classList.remove("tab_active"));
+    document
+      .querySelector(`.tab[data-tech="${clickedTab}"]`)
+      .classList.add("tab_active");
   });
 });

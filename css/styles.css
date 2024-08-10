@@ -212,9 +212,14 @@ select {
 }
 
 .tabbed-component {
+  padding-top: 20px;
   background-color: #454545;
   color: #fff;
   border: 1px solid green;
+}
+
+.container-descriptions {
+  margin-top: 20px;
 }
 
 .bootstrap-container {
@@ -232,6 +237,8 @@ select {
   color: var(--clr-black);
   border: 1px solid var(--clr-black);
   background-color: var(--clr-white);
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
 .tab:hover {
@@ -240,6 +247,11 @@ select {
 
 .tab_active {
   transform: translateY(-35%);
+  background-color: #f0f0f0;
+}
+
+.description {
+  overflow: hidden;
 }
 
 .card {
