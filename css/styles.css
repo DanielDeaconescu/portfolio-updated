@@ -226,6 +226,20 @@ select {
   display: flex;
 }
 
+.description-how {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.description-what {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .card {
   transition: all 0.4s ease;
 }
