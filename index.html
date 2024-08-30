@@ -58,9 +58,7 @@
     <!-- old navigation end -->
 
     <!-- bootstrap navigation start -->
-    <nav
-      class="navbar navbar-expand-md bg-dark navbar-dark navbar-custom sticky-top"
-    >
+    <nav class="navbar navbar-expand-md navbar-dark navbar-custom sticky-top">
       <div class="container container-custom">
         <a href="#" class="navbar-brand navbar-brand-custom">Daniel Dev</a>
         <button
@@ -90,7 +88,7 @@
               >
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link active link-custom">Contact</a>
+              <a href="#contact" class="nav-link active link-custom">Contact</a>
             </li>
           </ul>
         </div>
@@ -109,10 +107,7 @@
             <span>front-end developer learning back-end | </span>
             <span>self-taught</span>
           </p>
-          <a
-            href="#about"
-            class="btn btn-outline-secondary btn-lg mt-3 custom-btn"
-          >
+          <a href="#about" class="btn btn-outline-info btn-lg mt-3 custom-btn">
             <div class="d-flex">
               <div class="text-start">
                 <span>More About Me</span>
@@ -160,9 +155,9 @@
     <section id="about" class="about bg-light py-5">
       <div class="container">
         <div class="text-center">
-          <h4 class="text-uppercase fw-bold text-primary">About Me</h4>
+          <h4 class="text-uppercase fw-bold text-secondary">About Me</h4>
           <hr class="w-25 mx-auto" />
-          <h2 class="mb-4">Let me introduce myself.</h2>
+          <h2 class="mb-4 text-secondary">Let me introduce myself.</h2>
         </div>
         <div class="about-content d-flex gap-5 align-items-center h-100">
           <img
@@ -170,7 +165,7 @@
             alt=""
             class="about-img img-fluid rounded-5"
           />
-          <p class="lead">
+          <p class="lead text-secondary">
             I am a front-end web developer specializing in JavaScript, HTML and
             CSS. I am currently learning React and I am also a PHP enthusiast.
             What I like about web development comes down to two very closely
@@ -183,88 +178,95 @@
       </div>
     </section>
 
-    <!-- Profile & skills -->
+    <!-- Profile & skills start -->
     <section id="tech-skills" class="profile my-6">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
-            <h3 class="text-uppercase fw-bold">Profile</h3>
-            <p>Basic information about myself.</p>
+            <h3 class="text-uppercase fw-bold text-danger">Personal info</h3>
             <ul class="list-group list-group-flush">
               <li class="list-group-item mb-3">
-                <h5 class="text-transform">
-                  <i class="fas fa-user text-primary"></i> Full Name:
+                <h5 class="text-transform text-danger">
+                  <i class="fas fa-user text-danger"></i> Full Name:
                 </h5>
-                <p>Daniel Deaconescu</p>
+                <p class="text-danger">Daniel Deaconescu</p>
               </li>
-
-              <li class="list-group-item mb-3">
-                <h5 class="text-transform">
-                  <i class="fas fa-calendar text-primary"></i> Birth Date:
-                </h5>
-                <p>October 27, 1998</p>
-              </li>
-
-              <li class="list-group-item mb-3">
-                <h5 class="text-transform">
-                  <i class="fa-solid fa-location-pin text-primary"></i>
+              <!-- <li class="list-group-item mb-3">
+                <h5 class="text-transform text-danger">
+                  <i class="fa-solid fa-location-pin text-danger"></i>
                   Location:
                 </h5>
-                <p>Galati, Romania</p>
-              </li>
+                <p class="text-danger">Galati, Romania</p>
+              </li> -->
               <li class="list-group-item mb-3">
-                <h5 class="text-transform">
-                  <i class="fas fa-envelope text-primary"></i> Email:
+                <h5 class="text-transform text-danger">
+                  <i class="fas fa-envelope text-danger"></i> Email:
                 </h5>
-                <p>daniel.deaconescu98@gmail.com</p>
+                <p class="text-danger">daniel.deaconescu98@gmail.com</p>
+              </li>
+
+              <!-- LinkedIn profile -->
+              <li class="list-group-item mb-3 linkedin-list-item">
+                <a
+                  href="https://www.linkedin.com/in/daniel-deaconescu-378a771a9/"
+                  class="linkedin-profile"
+                  target="_blank"
+                >
+                  <h5 class="text-transform text-danger">
+                    <i class="fa-brands fa-linkedin"></i>
+                    See My LinkedIn Profile
+                  </h5>
+                  <small class="text-danger small"
+                    >For further basic info</small
+                  >
+                </a>
               </li>
             </ul>
           </div>
 
           <div class="col-md-6">
-            <h3 class="text-uppercase fw-bold">Technical Skills</h3>
-            <p>The technologies I know how to work with.</p>
+            <h3 class="text-uppercase fw-bold text-danger">My Passions</h3>
+            <p class="text-danger">The things I am most passionate about.</p>
 
             <div class="tech-skills">
-              <!-- HTML -->
+              <!-- Philosophy -->
               <div class="tech-item">
-                <i class="devicon-html5-plain tech-skill-icon text-primary"></i>
-                <span>HTML5</span>
+                <i class="fa-solid fa-book fa-2x"></i>
+                <span class="text-danger">Philosophy</span>
+                <small
+                  >I like reading because it ultimately helps me understand more
+                  things and therefore be more open minded.</small
+                >
               </div>
-              <!-- CSS -->
+              <!-- Technology -->
               <div class="tech-item">
-                <i class="devicon-css3-plain tech-skill-icon text-primary"></i>
-                <span>CSS</span>
+                <i class="fa-solid fa-microchip fa-2x"></i>
+                <span class="text-danger">Technology</span>
+                <small
+                  >Building useful things that other people can use gives me
+                  great satisfaction.
+                </small>
               </div>
 
-              <!-- SASS -->
+              <!-- Science -->
               <div class="tech-item">
-                <i
-                  class="devicon-sass-original tech-skill-icon text-primary"
-                ></i>
-                <span>SASS</span>
+                <i class="fa-solid fa-flask fa-2x"></i>
+                <span class="text-danger">Science</span>
+                <small
+                  >Philosophy pointed me to science since it's so concerned with
+                  seeking the truth.</small
+                >
               </div>
-              <!-- JavaScript -->
+
+              <!-- Running -->
               <div class="tech-item">
-                <i
-                  class="devicon-javascript-plain tech-skill-icon text-primary"
-                ></i>
-                <span>JavaScript</span>
+                <i class="fa-solid fa-person-running fa-2x"></i>
+                <span class="text-danger">Running</span>
+                <small
+                  >Phisical exercises such as running help me clear my mind and
+                  keep healthy.</small
+                >
               </div>
-              <!-- Bootstrap -->
-              <div class="tech-item">
-                <i
-                  class="devicon-bootstrap-plain tech-skill-icon text-primary"
-                ></i>
-                <span>Bootstrap</span>
-              </div>
-              <!-- PHP -->
-              <div class="tech-item">
-                <i class="devicon-php-plain tech-skill-icon text-primary"></i>
-                <span>PHP</span>
-              </div>
-              <!-- Python -->
-              <!-- UI/UX -->
             </div>
           </div>
         </div>
@@ -273,7 +275,7 @@
             <!-- link to the digital resume -->
             <a
               href="./digital_resume/index.html"
-              class="btn btn-outline-secondary btn-lg text-uppercase px-5 mx-3 my-2 view-resume-btn"
+              class="btn btn-outline-primary btn-lg text-uppercase px-5 mx-3 my-2 view-resume-btn"
               target="_blank"
               >View Digital Resume</a
             >
@@ -289,24 +291,35 @@
         </div>
       </div>
     </section>
+    <!-- Profile & skills end -->
 
     <!-- Tabbed component start  -->
     <section id="my-skills" class="tabbed-component">
       <div class="container">
-        <div class="row pb-4 tabs-container">
+        <div class="row pb-2 tabs-container">
           <div class="col-12 col-sm-3 mb-2">
             <button class="tab tab_active w-100" data-tech="1">
+              <i class="fa-brands fa-html5 pe-1 html-custom"></i>
               HTML & CSS
             </button>
           </div>
           <div class="col-12 col-sm-3 mb-2">
-            <button class="tab w-100" data-tech="2">JavaScript</button>
+            <button class="tab w-100" data-tech="2">
+              <i class="fa-brands fa-node-js pe-1 js-custom"></i>
+              JavaScript
+            </button>
           </div>
           <div class="col-12 col-sm-3 mb-2">
-            <button class="tab w-100" data-tech="3">PHP</button>
+            <button class="tab w-100" data-tech="3">
+              <i class="fa-brands fa-php pe-1 php-custom"></i>
+              PHP
+            </button>
           </div>
           <div class="col-12 col-sm-3 mb-2">
-            <button class="tab w-100" data-tech="4">Bootstrap</button>
+            <button class="tab w-100" data-tech="4">
+              <i class="fa-brands fa-bootstrap pe-1 bs-custom"></i>
+              Bootstrap
+            </button>
           </div>
         </div>
         <div class="row container-descriptions">
@@ -436,16 +449,16 @@
     <section id="my-work" class="portfolio py-5 bg-light position-relative">
       <div class="container position-relative">
         <div class="text-center mb-5">
-          <h4 class="text-uppercase fw-bold text-primary">My work</h4>
+          <h4 class="text-uppercase fw-bold text-secondary">My work</h4>
           <hr class="w-25 mx-auto" />
-          <h2 class="mb-4">
+          <h2 class="mb-4 text-warning">
             Here you can see some of my faviourite projects to work on
           </h2>
         </div>
         <div class="row row_projects">
           <!-- project 1 -->
           <div class="col-md-6 mb-4 d-flex justify-content-center">
-            <div class="card w-75 shadow-sm" data-project="1">
+            <div class="card w-75 shadow-sm card-custom" data-project="1">
               <img
                 src="./images/projects/project1-vera.jpg"
                 class="card-img-top img-fluid"
@@ -463,7 +476,7 @@
           </div>
           <!-- project 2 -->
           <div class="col-md-6 mb-4 d-flex justify-content-center">
-            <div class="card w-75 shadow-sm" data-project="2">
+            <div class="card w-75 shadow-sm card-custom" data-project="2">
               <img
                 src="./images/projects/project2-multi-step-form.jpg"
                 class="card-img-top img-fluid"
@@ -481,7 +494,7 @@
           </div>
           <!-- project 3 -->
           <div class="col-md-6 mb-4 d-flex justify-content-center">
-            <div class="card w-75 shadow-sm" data-project="3">
+            <div class="card w-75 shadow-sm card-custom" data-project="3">
               <img
                 src="./images/projects/project3-ecommerce-product-page.jpg"
                 class="card-img-top img-fluid"
@@ -527,7 +540,7 @@
               </p>
             </div>
             <div class="modal_action">
-              <a href="#" class="btn btn-primary">Project Preview</a>
+              <a href="#" class="btn btn-warning">Project Preview</a>
               <a href="#" class="btn btn-secondary">GitHub Repo</a>
             </div>
             <!-- <small>Press Esc to close</small> -->
@@ -561,7 +574,7 @@
               </p>
             </div>
             <div class="modal_action">
-              <a href="#" class="btn btn-primary">Project Preview</a>
+              <a href="#" class="btn btn-warning">Project Preview</a>
               <a href="#" class="btn btn-secondary">GitHub Repo</a>
             </div>
           </div>
@@ -595,7 +608,7 @@
               </p>
             </div>
             <div class="modal_action">
-              <a href="#" class="btn btn-primary">Project Preview</a>
+              <a href="#" class="btn btn-warning">Project Preview</a>
               <a href="#" class="btn btn-secondary">GitHub Repo</a>
             </div>
           </div>
@@ -610,9 +623,7 @@
     <section class="currently-learning text-bg-dark py-5 position-relative">
       <div class="container position-relative">
         <div class="text-center mb-5">
-          <h4 class="text-uppercase fw-bold text-primary">
-            Currently learning
-          </h4>
+          <h4 class="text-uppercase fw-bold text-light">Currently learning</h4>
           <hr class="w-25 mx-auto" />
           <h2 class="mb-4">Learning new technologies</h2>
           <p class="lead">
@@ -620,9 +631,9 @@
           </p>
         </div>
         <div class="row">
-          <div class="col-md-4 text-center">
-            <i class="fa-brands fa-3x fa-react text-primary mb-3"></i>
-            <h3 class="fs-3">React</h3>
+          <div class="col-md-6 text-center">
+            <i class="fa-brands fa-3x fa-react mb-3 icon-react-custom"></i>
+            <h3 class="fs-3 text-react-custom">React</h3>
             <hr class="w-25 mx-auto" />
             <p class="fs-5">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad iste
@@ -630,19 +641,9 @@
               consequatur!
             </p>
           </div>
-          <div class="col-md-4 text-center">
-            <i class="fa-brands fa-3x fa-php text-primary mb-3"></i>
-            <h3 class="fs-3">PHP</h3>
-            <hr class="w-25 mx-auto" />
-            <p class="fs-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad iste
-              commodi, optio voluptates cumque dignissimos hic a. Iste, modi
-              consequatur!
-            </p>
-          </div>
-          <div class="col-md-4 text-center">
-            <i class="fas fa-shopping-cart fa-3x text-primary mb-3"></i>
-            <h3 class="fs-3">Advertising & SEO</h3>
+          <div class="col-md-6 text-center">
+            <i class="fa-brands fa-3x fa-php mb-3 icon-php-custom"></i>
+            <h3 class="fs-3 text-php-custom">PHP</h3>
             <hr class="w-25 mx-auto" />
             <p class="fs-5">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad iste
@@ -654,17 +655,78 @@
       </div>
     </section>
     <!-- My learning journey end -->
-    <!--  -->
-    <section id="dev-blog" class="dev-blog"></section>
-    <!--  -->
+    <!-- Dev Blog start -->
+    <section id="dev-blog" class="dev-blog p-5 text-light">
+      <div class="container">
+        <h3 class="text-center">Dev Blog Preview</h3>
+        <p class="text-center">
+          Here are a few articles regarding some web development topics that I
+          deemed interesting.
+        </p>
+        <div class="row">
+          <!-- Intersection Observer -->
+          <div class="col-md-4">
+            <div class="card text-danger">
+              <img src="./images/article-1.jpg" class="card-img-top" alt="" />
+              <div class="card-body">
+                <h5 class="card-title">Intersection Observer</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Ducimus ut neque et accusamus hic dolorum natus nihil placeat
+                  autem commodi?
+                </p>
+                <a href="#" class="btn btn-success">Read article</a>
+              </div>
+            </div>
+          </div>
+          <!-- Blog Article 2 -->
+          <div class="col-md-4">
+            <div class="card text-danger">
+              <img src="./images/article-2.jpg" class="card-img-top" alt="" />
+              <div class="card-body">
+                <h5 class="card-title">Blog Article 2</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Ducimus ut neque et accusamus hic dolorum natus nihil placeat
+                  autem commodi?
+                </p>
+                <a href="#" class="btn btn-success">Read article</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Blog Article 3 -->
+          <div class="col-md-4">
+            <div class="card text-danger">
+              <img src="./images/article-3.jpg" class="card-img-top" alt="" />
+              <div class="card-body">
+                <h5 class="card-title">Blog Article 3</h5>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Ducimus ut neque et accusamus hic dolorum natus nihil placeat
+                  autem commodi?
+                </p>
+                <a href="#" class="btn btn-success">Read article</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="d-grid py-4">
+          <a href="#" class="btn btn-outline-primary btn-lg text-light"
+            >Read More Articles</a
+          >
+        </div>
+      </div>
+    </section>
+    <!-- Dev Blog end -->
 
     <!-- Contact section start -->
-    <section class="contact text-bg-dark bg-gradient py-5">
+    <section id="contact" class="contact text-bg-dark bg-gradient py-5">
       <div class="container">
         <div class="row">
           <div class="col-md-8 offset-md-2">
             <div class="text-center mb-5">
-              <h4 class="text-uppercase fw-bold text-primary">Contact</h4>
+              <h4 class="text-uppercase fw-bold text-light">Contact</h4>
               <hr class="w-25 mx-auto" />
               <h2 class="mb-4">I'd love to hear from you!</h2>
               <p class="lead">

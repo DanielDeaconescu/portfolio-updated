@@ -1,7 +1,7 @@
 "use strict";
 
 const socialLinks = document.querySelector(".social-links");
-const allCards = document.querySelectorAll(".card");
+const allCards = document.querySelectorAll(".card-custom");
 const portfolioSection = document.querySelector(".portfolio");
 const overlay = document.querySelector(".my_overlay");
 const rowProjects = document.querySelector(".row_projects");
@@ -29,7 +29,7 @@ const makeNavbarSticky = function (entries) {
 const options = {
   root: null,
   threshold: 0,
-  rootMargin: `-${navigationHeight}px`,
+  rootMargin: `-${navigationHeight + 50}px`,
 };
 
 const headerObserver = new IntersectionObserver(makeNavbarSticky, options);
@@ -128,5 +128,52 @@ allTabs.forEach((tab) => {
     document
       .querySelector(`.description[data-tech="${clickedTab}"]`)
       .classList.add("description-active");
+  });
+});
+
+// scrolling functionality
+
+// const aboutMeBtn = document.querySelector(".about-me-test");
+// aboutMeBtn.addEventListener("click", function (e) {
+//   e.preventDefault();
+
+//   const target = this.getAttribute("href").substring(1);
+//   const targetSection = document.getElementById(target);
+
+//   const navHeight = document
+//     .querySelector(".navbar")
+//     .getBoundingClientRect().height;
+//   const scrollPosition = targetSection.offsetTop - navHeight;
+
+//   window.scrollTo({
+//     top: scrollPosition,
+//     behavior: "smooth",
+//   });
+// });
+
+const allNavLinks = document.querySelectorAll(".link-custom");
+allNavLinks.forEach((item) => {
+  item.addEventListener("click", function (e) {
+    e.preventDefault();
+    const targetID = this.getAttribute("href").substring(1);
+    const targetSection = document.getElementById(targetID);
+    // we need to scroll down up until the top of each section - the height of the navigation bar
+    console.log(targetID);
+
+    // const navHeight = document
+    //   .querySelector(".navbar")
+    //   .getBoundingClientRect().height;
+    let scrollPosition;
+
+    if (targetID === "my-skills") {
+      scrollPosition = targetSection.offsetTop - (navigationHeight + 40);
+    } else {
+      scrollPosition = targetSection.offsetTop - navigationHeight;
+    }
+
+    window.scrollTo({
+      top: scrollPosition,
+      behavior: "smooth",
+    });
   });
 });
