@@ -273,9 +273,13 @@ select {
   font-weight: var(--fw-100);
 }
 
-.tab_active {
-  transform: translateY(-35%);
-  background-color: var(--clr-lighter);
+// Make the click effect of tabs only work on 768px and up
+
+@media (min-width: 768px) {
+  .tab.tab_active {
+    transform: translateY(-35%);
+    background-color: var(--clr-lighter);
+  }
 }
 
 .html-custom {
@@ -463,6 +467,14 @@ select {
   .description-how {
     border-bottom: 1px solid white;
   }
+  // tabs component
+  .tabs-container {
+    gap: 0.3125rem;
+  }
+
+  .container-descriptions {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 769px) {
@@ -508,6 +520,15 @@ select {
 
   .container-custom {
     max-width: 100% !important;
+  }
+
+  // tabs component
+  .tabs-container :nth-last-child(1) {
+    padding-top: 0.625rem;
+  }
+
+  .tabs-container :nth-last-child(2) {
+    padding-top: 0.625rem;
   }
 }
 
