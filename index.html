@@ -724,22 +724,41 @@
     <section id="contact" class="contact text-bg-dark bg-gradient py-5">
       <div class="container">
         <div class="row">
-          <div class="col-md-8 offset-md-2">
+          <div class="col-md-8 offset-md-2 form_container">
             <div class="text-center mb-5">
               <h4 class="text-uppercase fw-bold text-light">Contact</h4>
               <hr class="w-25 mx-auto" />
-              <h2 class="mb-4">I'd love to hear from you!</h2>
+              <h2 class="mb-4">Drop me a line!</h2>
               <p class="lead">
-                If you have any questions or would like to work together, please
-                contact me with the form below.
+                Should you have questions about my work or wish to discuss
+                potential collaboration opportunities, you may reach out by
+                filling the form below.
+              </p>
+              <p>
+                I look forward to hear from other developers and, generally,
+                just people how are on the same road as myself!
               </p>
             </div>
-            <form action="">
+            <!-- contact form button -->
+            <div class="form-button">
+              <i class="fa-solid fa-message"></i>
+            </div>
+            <!-- contact form button -->
+            <!-- contact form -->
+            <form class="contact_form" action="">
               <div class="mb-5">
                 <input
                   type="text"
                   class="form-control bg-transparent border-top-0 border-start-0 border-end-0 rounded-0 border-muted text-white"
-                  placeholder="Name"
+                  placeholder="Full Name"
+                />
+              </div>
+
+              <div class="mb-5">
+                <input
+                  type="text"
+                  class="form-control bg-transparent border-top-0 border-start-0 border-end-0 rounded-0 border-muted text-white"
+                  placeholder="Company Name"
                 />
               </div>
 
@@ -761,6 +780,7 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
               </div>
             </form>
+            <!-- contact form -->
           </div>
         </div>
         <!-- Contact section end -->

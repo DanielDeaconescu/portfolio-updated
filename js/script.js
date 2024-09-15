@@ -12,6 +12,8 @@ const allDescriptions = document.querySelectorAll(".description");
 const body = document.querySelector("body");
 const header = document.querySelector(".header");
 const navigation = document.querySelector(".navbar-custom");
+const formButton = document.querySelector(".form-button");
+const contactForm = document.querySelector(".contact_form");
 
 // navigation functionality (we display the navigation when the header is no longer in view)
 
@@ -176,4 +178,10 @@ allNavLinks.forEach((item) => {
       behavior: "smooth",
     });
   });
+});
+
+// Form button functionality
+
+formButton.addEventListener("click", function () {
+  contactForm.classList.toggle("display-none");
 });
