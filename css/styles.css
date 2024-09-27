@@ -400,12 +400,6 @@ select {
   background-color: var(--clr-darkest);
 }
 
-.form_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .contact_form {
   display: flex;
   flex-direction: column;

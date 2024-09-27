@@ -155,9 +155,9 @@
     <section id="about" class="about bg-light py-5">
       <div class="container">
         <div class="text-center">
-          <h4 class="text-uppercase fw-bold text-secondary">About Me</h4>
+          <h4 class="text-uppercase fw-bold text-primary">About Me</h4>
           <hr class="w-25 mx-auto" />
-          <h2 class="mb-4 text-secondary">Let me introduce myself.</h2>
+          <h2 class="mb-4 text-primary">Let me introduce myself.</h2>
         </div>
         <div class="about-content d-flex gap-5 align-items-center h-100">
           <img
@@ -165,7 +165,7 @@
             alt=""
             class="about-img img-fluid rounded-5"
           />
-          <p class="lead text-secondary">
+          <p class="lead text-primary">
             I am a front-end web developer specializing in JavaScript, HTML and
             CSS. I am currently learning React and I am also a PHP enthusiast.
             What I like about web development comes down to two very closely
@@ -450,7 +450,7 @@
     <section id="my-work" class="portfolio py-5 bg-light position-relative">
       <div class="container position-relative">
         <div class="text-center mb-5">
-          <h4 class="text-uppercase fw-bold text-secondary">My work</h4>
+          <h4 class="text-uppercase fw-bold text-primary">My work</h4>
           <hr class="w-25 mx-auto" />
           <h2 class="mb-4 text-warning">
             Here you can see some of my faviourite projects to work on
@@ -667,9 +667,9 @@
         <div class="row">
           <!-- Intersection Observer -->
           <div class="col-md-4">
-            <div class="card text-danger">
+            <div class="card text-danger border-0">
               <img src="./images/article-1.jpg" class="card-img-top" alt="" />
-              <div class="card-body">
+              <div class="card-body d-flex flex-column">
                 <h5 class="card-title">Intersection Observer</h5>
                 <p class="card-text">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -682,9 +682,9 @@
           </div>
           <!-- Blog Article 2 -->
           <div class="col-md-4">
-            <div class="card text-danger">
+            <div class="card text-danger border-0">
               <img src="./images/article-2.jpg" class="card-img-top" alt="" />
-              <div class="card-body">
+              <div class="card-body d-flex flex-column">
                 <h5 class="card-title">Blog Article 2</h5>
                 <p class="card-text">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -698,9 +698,9 @@
 
           <!-- Blog Article 3 -->
           <div class="col-md-4">
-            <div class="card text-danger">
+            <div class="card text-danger border-0">
               <img src="./images/article-3.jpg" class="card-img-top" alt="" />
-              <div class="card-body">
+              <div class="card-body d-flex flex-column">
                 <h5 class="card-title">Blog Article 3</h5>
                 <p class="card-text">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -713,8 +713,8 @@
           </div>
         </div>
         <div class="d-grid py-4">
-          <a href="#" class="btn btn-outline-primary btn-lg text-light"
-            >Read More Articles</a
+          <a href="#" class="btn btn-secondary btn-lg text-dark text-uppercase"
+            >Visit Blog</a
           >
         </div>
       </div>
@@ -725,62 +725,21 @@
     <section id="contact" class="contact text-bg-dark bg-gradient py-5">
       <div class="container">
         <div class="row">
-          <div class="col-md-8 offset-md-2 form_container">
-            <div class="text-center mb-5">
-              <h4 class="text-uppercase fw-bold text-light">Contact</h4>
-              <hr class="w-25 mx-auto" />
-              <h2 class="mb-4">Drop me a line!</h2>
-              <p class="lead">
-                Should you have questions about my work or wish to discuss
-                potential collaboration opportunities, you may reach out by
-                filling the form below.
-              </p>
-              <p>
-                I look forward to hear from other developers and, generally,
-                just people how are on the same road as myself!
-              </p>
-            </div>
+          <h4 class="text-center">Contact Me</h4>
 
-            <!-- contact form button -->
-            <!-- contact form -->
-            <form class="contact_form display-none" action="">
-              <div class="mb-5">
-                <input
-                  type="text"
-                  class="form-control bg-transparent border-top-0 border-start-0 border-end-0 rounded-0 border-muted text-white first-input"
-                  placeholder="Full Name"
-                />
-              </div>
-
-              <div class="mb-5">
-                <input
-                  type="text"
-                  class="form-control bg-transparent border-top-0 border-start-0 border-end-0 rounded-0 border-muted text-white"
-                  placeholder="Company Name"
-                />
-              </div>
-
-              <div class="mb-5">
-                <input
-                  type="email"
-                  class="form-control bg-transparent border-top-0 border-start-0 border-end-0 rounded-0 border-muted text-white"
-                  placeholder="Email"
-                />
-              </div>
-
-              <div class="mb-5">
-                <textarea
-                  class="form-control bg-transparent border-top-0 border-start-0 border-end-0 rounded-0 border-muted text-white"
-                  placeholder="Message"
-                ></textarea>
-              </div>
-              <div class="mb-5 d-grid">
-                <button type="submit" class="btn btn-primary submit-custom">
-                  Submit
-                </button>
-              </div>
-            </form>
-            <!-- contact form -->
+          <p>
+            I'm excited to connect with potential employers and collaborators.
+            Should you like to get in touch, feel free to fill out the contact
+            form or send me an email directly. I'll get back to you as soon as
+            possible.
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md-6 d-flex justify-content-center">
+            <button class="btn btn-primary">Contact Form</button>
+          </div>
+          <div class="col-md-6 d-flex justify-content-center">
+            <button class="btn btn-primary">Send me an email</button>
           </div>
         </div>
         <!-- Contact section end -->
@@ -818,6 +777,48 @@
       <div class="back-to-top">
         <i class="fa-solid fa-arrow-up"></i>
       </div>
+    </div>
+
+    <div class="contact-form">
+      <!-- contact form -->
+      <form class="contact_form display-none" action="">
+        <div class="mb-5">
+          <input
+            type="text"
+            class="form-control bg-transparent border-top-0 border-start-0 border-end-0 rounded-0 border-muted text-white first-input"
+            placeholder="Full Name"
+          />
+        </div>
+
+        <div class="mb-5">
+          <input
+            type="text"
+            class="form-control bg-transparent border-top-0 border-start-0 border-end-0 rounded-0 border-muted text-white"
+            placeholder="Company Name"
+          />
+        </div>
+
+        <div class="mb-5">
+          <input
+            type="email"
+            class="form-control bg-transparent border-top-0 border-start-0 border-end-0 rounded-0 border-muted text-white"
+            placeholder="Email"
+          />
+        </div>
+
+        <div class="mb-5">
+          <textarea
+            class="form-control bg-transparent border-top-0 border-start-0 border-end-0 rounded-0 border-muted text-white"
+            placeholder="Message"
+          ></textarea>
+        </div>
+        <div class="mb-5 d-grid">
+          <button type="submit" class="btn btn-primary submit-custom">
+            Submit
+          </button>
+        </div>
+      </form>
+      <!-- contact form -->
     </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>

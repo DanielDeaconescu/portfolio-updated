@@ -453,12 +453,6 @@ select {
 
 // Contact form start (Modal)
 
-.form_container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .contact_form {
   display: flex;
   flex-direction: column;
@@ -517,7 +511,7 @@ select {
 //   background-color: red;
 // }
 
-// Side buttons
+// Side buttons start
 
 .side-buttons {
   gap: 0.5rem;
@@ -554,6 +548,8 @@ select {
 .back-to-top:hover {
   cursor: pointer;
 }
+
+// Side buttons end
 
 // Media Queries
 @media (max-width: 577px) {
