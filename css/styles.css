@@ -98,6 +98,7 @@ select {
   padding: 0;
   background-color: var(--clr-darkest);
   color: var(--clr-white);
+  z-index: 101;
 }
 
 .link-custom {
@@ -331,7 +332,7 @@ select {
 }
 
 .display-none {
-  display: none;
+  display: none !important;
 }
 
 .my_modal {
@@ -409,23 +410,64 @@ select {
   display: flex;
   flex-direction: column;
   position: fixed;
-  top: 10%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 102;
+  background-color: hsl(209, 33%, 27%);
+  padding: var(--size-700);
+  border-radius: 20px;
+}
+
+.contact_form div {
+  background-color: white;
+}
+
+.contact_form div input {
+  color: var(--clr-black) !important;
+}
+
+.contact_form div textarea {
+  color: var(--clr-black) !important;
+}
+
+.submit-custom {
+  background-color: hsl(208, 33%, 9%) !important;
+}
+
+.side-buttons {
+  gap: 0.5rem;
+  color: var(--clr-white);
 }
 
 .form-button {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  background-color: var(--clr-dark);
+  padding: 0.75rem;
   border-radius: 50%;
   position: fixed;
   bottom: 12.5%;
   right: 2.5%;
-  background-color: #0f171e;
+  z-index: 11;
+}
+
+.back-to-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-dark);
+  padding: 0.75rem;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 5%;
+  right: 2.5%;
   z-index: 10;
 }
 
-.form-button:hover {
+.form-button:hover,
+.back-to-top:hover {
   cursor: pointer;
 }
 

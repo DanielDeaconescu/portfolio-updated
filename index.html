@@ -285,8 +285,9 @@
               class="btn btn-lg text-uppercase px-5 mx-3 my-2 download-resume-btn"
               target="_blank"
               download="resume_Daniel_Deaconescu.pdf"
-              >Download Resume</a
-            >
+              >Download Resume
+              <i class="fa-solid fa-file-pdf"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -739,17 +740,14 @@
                 just people how are on the same road as myself!
               </p>
             </div>
-            <!-- contact form button -->
-            <div class="form-button">
-              <i class="fa-solid fa-message"></i>
-            </div>
+
             <!-- contact form button -->
             <!-- contact form -->
-            <form class="contact_form" action="">
+            <form class="contact_form display-none" action="">
               <div class="mb-5">
                 <input
                   type="text"
-                  class="form-control bg-transparent border-top-0 border-start-0 border-end-0 rounded-0 border-muted text-white"
+                  class="form-control bg-transparent border-top-0 border-start-0 border-end-0 rounded-0 border-muted text-white first-input"
                   placeholder="Full Name"
                 />
               </div>
@@ -777,7 +775,9 @@
                 ></textarea>
               </div>
               <div class="mb-5 d-grid">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-primary submit-custom">
+                  Submit
+                </button>
               </div>
             </form>
             <!-- contact form -->
@@ -808,6 +808,17 @@
         </div>
       </div>
     </section>
+    <div class="side-buttons">
+      <!-- contact form button -->
+      <div class="form-button">
+        <i class="fa-solid fa-message"></i>
+      </div>
+
+      <!-- back to top button -->
+      <div class="back-to-top">
+        <i class="fa-solid fa-arrow-up"></i>
+      </div>
+    </div>
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/lightbox-plus-jquery.min.js"></script>

@@ -14,6 +14,8 @@ const header = document.querySelector(".header");
 const navigation = document.querySelector(".navbar-custom");
 const formButton = document.querySelector(".form-button");
 const contactForm = document.querySelector(".contact_form");
+const firstInput = document.querySelector(".first-input");
+const backToTopButton = document.querySelector(".back-to-top");
 
 // navigation functionality (we display the navigation when the header is no longer in view)
 
@@ -88,7 +90,7 @@ const openModal = function (modalNumber) {
 const closeModal = function () {
   // check which modal does not have the "displayy-none" class
   const visibleModal = document.querySelector(".my_modal:not(.display-none)");
-  visibleModal.classList.add("display-none");
+  if (visibleModal) visibleModal.classList.add("display-none");
   overlay.classList.add("display-none");
   document.querySelector("body").style.overflowY = "auto";
 };
@@ -180,8 +182,54 @@ allNavLinks.forEach((item) => {
   });
 });
 
-// Form button functionality
+const closeForm = function () {
+  contactForm.classList.add("display-none");
+  overlay.classList.add("display-none");
+  contactForm.reset();
+};
 
+const checkIfFormIsOpen = function () {
+  return contactForm.classList.contains("display-none") ? false : true;
+};
+
+// Form button functionality
 formButton.addEventListener("click", function () {
   contactForm.classList.toggle("display-none");
+  overlay.classList.toggle("display-none");
+  checkIfFormIsOpen();
+  const isFormOpen = checkIfFormIsOpen();
+
+  if (isFormOpen) {
+    navigation.classList.add("display-none");
+    firstInput.focus();
+  } else {
+    navigation.classList.remove("display-none");
+    contactForm.reset();
+  }
+});
+
+// closing the form when clicking outside
+overlay.addEventListener("click", function () {
+  closeForm();
+  const isFormOpen = checkIfFormIsOpen();
+  isFormOpen
+    ? navigation.classList.add("display-none")
+    : navigation.classList.remove("display-none");
+});
+
+// closing the form with the "Esc" key
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") closeForm();
+  const isFormOpen = checkIfFormIsOpen();
+  isFormOpen
+    ? navigation.classList.add("display-none")
+    : navigation.classList.remove("display-none");
+});
+
+// Back to top functionality
+backToTopButton.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
 });
