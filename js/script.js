@@ -16,6 +16,7 @@ const formButton = document.querySelector(".form-button");
 const contactForm = document.querySelector(".contact_form");
 const firstInput = document.querySelector(".first-input");
 const backToTopButton = document.querySelector(".back-to-top");
+const modalButton = document.querySelector(".form-modal-btn");
 
 // navigation functionality (we display the navigation when the header is no longer in view)
 
@@ -73,27 +74,47 @@ const opacityChanger = function (e) {
 socialLinks.addEventListener("mouseover", opacityChanger.bind(0.5));
 socialLinks.addEventListener("mouseout", opacityChanger.bind(1));
 
+// displaying icons when the resolution is below 578px
+function checkScreenWidth() {
+  const socialLinksMobile = document.querySelector(".social-links-mobile");
+  const socialLinksLarge = document.querySelector(".social-links");
+
+  if (window.matchMedia("(max-width: 577px)").matches) {
+    socialLinksMobile.style.display = "block";
+    socialLinksLarge.style.display = "none";
+  } else {
+    socialLinksMobile.style.display = "none";
+    socialLinksLarge.style.display = "block";
+  }
+}
+
+// Check on load
+checkScreenWidth();
+
+// Add an event listener to detect screen resize
+window.addEventListener("resize", checkScreenWidth);
+
 // modal functionality
 
 // create a function that opens a modal based on the specified number
-const openModal = function (modalNumber) {
-  const correspondingModal = document.querySelector(
-    `.my_modal[data-modal="${modalNumber}"]`
-  );
-  correspondingModal.classList.remove("display-none");
-  correspondingModal.scrollIntoView({ behavior: "smooth", block: "start" });
-  overlay.classList.remove("display-none");
-  document.querySelector("body").style.overflowY = "hidden";
-};
+// const openModal = function (modalNumber) {
+//   const correspondingModal = document.querySelector(
+//     `.my_modal[data-modal="${modalNumber}"]`
+//   );
+//   correspondingModal.classList.remove("display-none");
+//   correspondingModal.scrollIntoView({ behavior: "smooth", block: "start" });
+//   overlay.classList.remove("display-none");
+//   document.querySelector("body").style.overflowY = "hidden";
+// };
 
 // create a function that checks which modal is currently open and returns its data-project
-const closeModal = function () {
-  // check which modal does not have the "displayy-none" class
-  const visibleModal = document.querySelector(".my_modal:not(.display-none)");
-  if (visibleModal) visibleModal.classList.add("display-none");
-  overlay.classList.add("display-none");
-  document.querySelector("body").style.overflowY = "auto";
-};
+// const closeModal = function () {
+//   // check which modal does not have the "displayy-none" class
+//   const visibleModal = document.querySelector(".my_modal:not(.display-none)");
+//   if (visibleModal) visibleModal.classList.add("display-none");
+//   overlay.classList.add("display-none");
+//   document.querySelector("body").style.overflowY = "auto";
+// };
 
 allCards.forEach((card) => {
   card.addEventListener("click", function (e) {
@@ -102,7 +123,7 @@ allCards.forEach((card) => {
   });
 });
 // closing modal when clicking the overlay
-overlay.addEventListener("click", closeModal);
+// overlay.addEventListener("click", closeModal);
 // closing modal when clicking "X" mark
 closingBtns.forEach((closingBtn) =>
   closingBtn.addEventListener("click", closeModal)
@@ -193,38 +214,38 @@ const checkIfFormIsOpen = function () {
 };
 
 // Form button functionality
-formButton.addEventListener("click", function () {
-  contactForm.classList.toggle("display-none");
-  overlay.classList.toggle("display-none");
-  checkIfFormIsOpen();
-  const isFormOpen = checkIfFormIsOpen();
+// formButton.addEventListener("click", function () {
+//   contactForm.classList.toggle("display-none");
+//   overlay.classList.toggle("display-none");
+//   checkIfFormIsOpen();
+//   const isFormOpen = checkIfFormIsOpen();
 
-  if (isFormOpen) {
-    navigation.classList.add("display-none");
-    firstInput.focus();
-  } else {
-    navigation.classList.remove("display-none");
-    contactForm.reset();
-  }
-});
+//   if (isFormOpen) {
+//     navigation.classList.add("display-none");
+//     firstInput.focus();
+//   } else {
+//     navigation.classList.remove("display-none");
+//     contactForm.reset();
+//   }
+// });
 
 // closing the form when clicking outside
-overlay.addEventListener("click", function () {
-  closeForm();
-  const isFormOpen = checkIfFormIsOpen();
-  isFormOpen
-    ? navigation.classList.add("display-none")
-    : navigation.classList.remove("display-none");
-});
+// overlay.addEventListener("click", function () {
+//   closeForm();
+//   const isFormOpen = checkIfFormIsOpen();
+//   isFormOpen
+//     ? navigation.classList.add("display-none")
+//     : navigation.classList.remove("display-none");
+// });
 
-// closing the form with the "Esc" key
-document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape") closeForm();
-  const isFormOpen = checkIfFormIsOpen();
-  isFormOpen
-    ? navigation.classList.add("display-none")
-    : navigation.classList.remove("display-none");
-});
+// // closing the form with the "Esc" key
+// document.addEventListener("keydown", function (e) {
+//   if (e.key === "Escape") closeForm();
+//   const isFormOpen = checkIfFormIsOpen();
+//   isFormOpen
+//     ? navigation.classList.add("display-none")
+//     : navigation.classList.remove("display-none");
+// });
 
 // Back to top functionality
 backToTopButton.addEventListener("click", function () {

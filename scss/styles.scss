@@ -128,14 +128,20 @@ select {
 }
 
 .navbar-brand-custom {
-  padding: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
+}
+
+.logo_img {
+  max-width: 60px;
 }
 // navigation end
 
 // header start
 .header {
-  background: var(--clr-black-less) url("../images/header-background.jpg")
-    no-repeat center center;
+  background-color: #387478;
   background-size: cover;
   background-attachment: fixed;
 }
@@ -182,6 +188,30 @@ select {
 .social-link:hover {
   color: #f4f4f4;
   background-color: var(--clr-lighter);
+}
+
+.mobile-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 2rem;
+  text-decoration: none;
+  color: var(--clr-white);
+}
+
+.mobile-link:visited {
+  color: var(--clr-white);
+  text-decoration: none;
+}
+
+.mobile-link:link {
+  color: var(--clr-white);
+  text-decoration: none;
+}
+
+.social-links-mobile-inner {
+  justify-content: center;
+  gap: 5rem;
 }
 // header end
 
@@ -274,6 +304,10 @@ select {
   font-weight: var(--fw-100);
 }
 
+.description-how-text p {
+  text-align: justify;
+}
+
 // Make the click effect of tabs only work on 768px and up
 
 @media (min-width: 768px) {
@@ -321,97 +355,122 @@ select {
 .description-how {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: flex-start;
 }
 
 .description-what {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: flex-start;
 }
 
 // Tabbed component end
 
 // portfolio content start
 
-.card-custom {
-  transition: all 0.4s ease;
+// .card-custom {
+//   transition: all 0.4s ease;
+// }
+
+// .card-custom:hover {
+//   cursor: pointer;
+//   transform: scale(1.05);
+//   opacity: 0.8;
+// }
+
+// .my_overlay {
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   bottom: 0;
+//   width: 100vw;
+//   height: 100vh;
+//   background-color: rgba(0, 0, 0, 0.7);
+//   backdrop-filter: blur(3px);
+//   z-index: 11;
+// }
+
+// .closing_btn {
+//   position: absolute;
+//   top: var(--size-200);
+//   right: var(--size-200);
+//   z-index: 11;
+//   color: #000;
+// }
+
+// .closing_btn:hover {
+//   cursor: pointer;
+// }
+
+// .display-none {
+//   display: none !important;
+// }
+
+// // modals
+
+// .my_modal {
+//   position: fixed;
+//   top: 25%;
+//   left: 50%;
+//   transform: translate(-50%, -20%);
+//   border-radius: var(--size-200);
+//   padding: var(--size-500);
+//   z-index: 1000;
+//   max-width: 600px;
+//   width: 90%;
+//   // max-height: 90vh;
+//   overflow: hidden;
+//   box-sizing: border-box;
+// }
+
+// .modal_image {
+//   padding-top: var(--size-100);
+// }
+
+// .modal_image_inner {
+//   border-radius: var(--size-200);
+// }
+
+// .modal_title {
+//   padding-top: var(--size-200);
+// }
+
+// .modal_action {
+//   display: flex;
+//   justify-content: center;
+//   padding-top: var(--size-200);
+//   gap: var(--size-100);
+// }
+
+// .modal_paragraph {
+//   padding-top: var(--size-200);
+// }
+
+// modal styling after replacement with bootstrap modals
+.project-card {
+  transition: all 0.3s ease;
 }
 
-.card-custom:hover {
-  cursor: pointer;
+.project-card:hover {
   transform: scale(1.05);
-  opacity: 0.8;
 }
 
-.my_overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(3px);
-  z-index: 11;
+.modal-footer {
+  border: none;
 }
 
-.closing_btn {
-  position: absolute;
-  top: var(--size-200);
-  right: var(--size-200);
-  z-index: 11;
-  color: #000;
+.btn-preview {
+  flex: 1;
 }
 
-.closing_btn:hover {
-  cursor: pointer;
+.btn-github {
+  flex: 1;
 }
 
-.display-none {
-  display: none !important;
-}
-
-// modals
-
-.my_modal {
-  position: fixed;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -20%);
-  border-radius: var(--size-200);
-  padding: var(--size-500);
-  z-index: 1000;
-  max-width: 600px;
-  width: 90%;
-  // max-height: 90vh;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
-.modal_image {
-  padding-top: var(--size-100);
-}
-
-.modal_image_inner {
-  border-radius: var(--size-200);
-}
-
-.modal_title {
-  padding-top: var(--size-200);
-}
-
-.modal_action {
-  display: flex;
-  justify-content: center;
-  padding-top: var(--size-200);
-  gap: var(--size-100);
-}
-
-.modal_paragraph {
-  padding-top: var(--size-200);
+.modal-body img {
+  border-radius: 5px;
 }
 
 // portfolio content end
@@ -514,8 +573,13 @@ select {
 // Side buttons start
 
 .side-buttons {
+  display: flex;
+  flex-direction: column;
   gap: 0.5rem;
   color: var(--clr-white);
+  position: fixed;
+  bottom: 5%;
+  right: 2.5%;
 }
 
 .form-button {
@@ -538,15 +602,39 @@ select {
   background-color: var(--clr-dark);
   padding: 0.75rem;
   border-radius: 50%;
-  position: fixed;
-  bottom: 5%;
-  right: 2.5%;
-  z-index: 10;
 }
 
 .form-button:hover,
 .back-to-top:hover {
   cursor: pointer;
+}
+
+.form-modal-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-dark);
+  padding: 0.75rem;
+  border-radius: 50%;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.submit-btn {
+  flex: 1;
+}
+
+.cancel-btn {
+  flex: 1;
+}
+
+.modal-form {
+  padding: 1rem;
+  border-radius: 0.75rem;
 }
 
 // Side buttons end

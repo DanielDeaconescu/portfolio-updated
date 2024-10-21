@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-    <!-- Dvicon -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/logo_light.png"
+    />
+    <!-- Devicon -->
     <link
       rel="stylesheet"
       type="text/css"
@@ -60,7 +65,13 @@
     <!-- bootstrap navigation start -->
     <nav class="navbar navbar-expand-md navbar-dark navbar-custom sticky-top">
       <div class="container container-custom">
-        <a href="#" class="navbar-brand navbar-brand-custom">Daniel Dev</a>
+        <a href="#" class="navbar-brand navbar-brand-custom">
+          <img
+            src="images/logo_light.png"
+            class="img-fluid logo_img"
+            alt=""
+          />Daniel Dev
+        </a>
         <button
           type="button"
           data-bs-toggle="collapse"
@@ -118,7 +129,7 @@
             </div>
           </a>
         </div>
-
+        <!-- social links for larger screens -->
         <div class="container social-links mt-3">
           <div class="row justify-content-center social-links-row">
             <div class="col-12 col-md-4 mb-3 mb-md-0">
@@ -148,6 +159,38 @@
             </div>
           </div>
         </div>
+        <!-- social links for mobile -->
+        <div class="container social-links-mobile">
+          <div class="d-flex social-links-mobile-inner">
+            <a
+              href="https://www.frontendmentor.io/profile/DanielDeaconescu"
+              target="_blank"
+              class="mobile-link"
+            >
+              <img
+                src="./images/frontend_mentor_logo.png"
+                alt="frontend mentor logo"
+              />
+              <small class="pt-2">Frontend Mentor</small>
+            </a>
+            <a
+              href="https://www.codewars.com/users/Daniel%20Deaconescu"
+              target="_blank"
+              class="mobile-link"
+            >
+              <img src="./images/codewars_logo.png" alt="codewars logo" />
+              <small class="pt-2">Codewars</small>
+            </a>
+            <a
+              href="https://github.com/DanielDeaconescu"
+              target="_blank"
+              class="mobile-link"
+            >
+              <img src="./images/github_logo.png" alt="github logo" />
+              <small class="pt-2">GitHub</small>
+            </a>
+          </div>
+        </div>
       </div>
     </header>
 
@@ -165,15 +208,16 @@
             alt=""
             class="about-img img-fluid rounded-5"
           />
-          <p class="lead text-primary">
-            I am a front-end web developer specializing in JavaScript, HTML and
-            CSS. I am currently learning React and I am also a PHP enthusiast.
-            What I like about web development comes down to two very closely
-            related things: building stuff and solving problems. The
-            satisfaction that I get from knowing that other people see or
-            interact with something that I built is enormous and the feeling I
-            get when solving a problem is just very powerful and gets me hooked.
-          </p>
+          <div class="d-flex flex-column">
+            <p class="lead text-primary">
+              My motivation for building full-stack websites and applications
+              stems from two things that I love doing: building things and
+              solving problems.
+            </p>
+            <p class="lead text-primary">
+              I am constantly working on improving my developer skills.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -328,24 +372,31 @@
           <div class="description description-active row" data-tech="1">
             <div class="col-md-6 description-how">
               <h3>How I learned it</h3>
-              <p>
-                HTML & CSS Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. At debitis culpa sit esse animi unde quisquam repellat
-                dolorem in maiores officia ipsam optio placeat quod est delectus
-                nemo, nulla vitae reiciendis, explicabo nostrum? Impedit
-                sapiente magni tempore excepturi, esse dolorem consequuntur
-                magnam quod suscipit itaque, voluptates ad ipsam assumenda
-                consequatur!
-              </p>
+              <div class="description-how-text px-3">
+                <p class="lead">
+                  I picked up HTML & CSS from a bootcamp at a local web
+                  development company in Galati, Romania.
+                </p>
+                <p class="lead">
+                  I went in with a little bit of prior knowledge (codecademy
+                  course) and it was an awesome learning experience.
+                </p>
+                <p class="lead">
+                  The fact that I was able to complete the final project
+                  (building a website starting from just a Photoshop document)
+                  helped me build up confidence and I went on to learning
+                  JavaScript on my own.
+                </p>
+              </div>
             </div>
             <!-- <div class="vertical-line"></div> -->
             <div class="col-md-6 description-what">
               <h3>What I built with it</h3>
-              <p>
+              <!-- <p>
                 HTML & CSS Lorem ipsum dolor, sit amet consectetur adipisicing
                 elit. Dolores consequuntur reiciendis quasi nesciunt ipsa rerum
                 unde eum explicabo obcaecati sed.
-              </p>
+              </p> -->
               <ul>
                 <li>project 1</li>
                 <li>project 2</li>
@@ -358,23 +409,20 @@
           <div class="description row" data-tech="2">
             <div class="col-md-6 description-how">
               <h3>How I learned it</h3>
-              <p>
-                JavaScript Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. At debitis culpa sit esse animi unde quisquam repellat
-                dolorem in maiores officia ipsam optio placeat quod est delectus
-                nemo, nulla vitae reiciendis, explicabo nostrum? Impedit
-                sapiente magni tempore excepturi, esse dolorem consequuntur
-                magnam quod suscipit itaque, voluptates ad ipsam assumenda
-                consequatur!
-              </p>
+              <div class="description-how-text px-3">
+                <p class="lead">
+                  I mainly picked up the basics of JavaScript from the Udemy
+                  courses of Jonas Schmedtmann and Andrei Neagoie.
+                </p>
+                <p class="lead">
+                  I went on to building my own projects and experiment with the
+                  things I learned through courses and I discovered learning can
+                  be really fun.
+                </p>
+              </div>
             </div>
             <div class="col-md-6 description-what">
               <h3>What I built with it</h3>
-              <p>
-                JavaScript Lorem ipsum dolor, sit amet consectetur adipisicing
-                elit. Dolores consequuntur reiciendis quasi nesciunt ipsa rerum
-                unde eum explicabo obcaecati sed.
-              </p>
               <ul>
                 <li>project 1</li>
                 <li>project 2</li>
@@ -387,22 +435,19 @@
           <div class="description row" data-tech="3">
             <div class="col-12 col-md-6 description-how">
               <h3>How I learned it</h3>
-              <p>
-                PHP Lorem ipsum dolor sit amet, consectetur adipisicing elit. At
-                debitis culpa sit esse animi unde quisquam repellat dolorem in
-                maiores officia ipsam optio placeat quod est delectus nemo,
-                nulla vitae reiciendis, explicabo nostrum? Impedit sapiente
-                magni tempore excepturi, esse dolorem consequuntur magnam quod
-                suscipit itaque, voluptates ad ipsam assumenda consequatur!
-              </p>
+              <div class="description-how-text px-3">
+                <p class="lead">
+                  I picked up the basics of PHP from Brad Traversy on YouTube
+                  and through the Udemy course of Jannis Seemann.
+                </p>
+                <p class="lead">
+                  I started liking it more and more as I understood how powerful
+                  it can be.
+                </p>
+              </div>
             </div>
             <div class="col-12 col-md-6 description-what">
               <h3>What I built with it</h3>
-              <p>
-                PHP Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Dolores consequuntur reiciendis quasi nesciunt ipsa rerum unde
-                eum explicabo obcaecati sed.
-              </p>
               <ul>
                 <li>project 1</li>
                 <li>project 2</li>
@@ -416,23 +461,21 @@
           <div class="description row" data-tech="4">
             <div class="col-12 col-md-6 description-how">
               <h3>How I learned it</h3>
-              <p>
-                Bootstrap Lorem ipsum dolor sit amet, consectetur adipisicing
-                elit. At debitis culpa sit esse animi unde quisquam repellat
-                dolorem in maiores officia ipsam optio placeat quod est delectus
-                nemo, nulla vitae reiciendis, explicabo nostrum? Impedit
-                sapiente magni tempore excepturi, esse dolorem consequuntur
-                magnam quod suscipit itaque, voluptates ad ipsam assumenda
-                consequatur!
-              </p>
+              <div class="description-how-text px-3">
+                <p class="lead">
+                  I was introduced to Bootstrap early on after learning the
+                  basics of HTML & CSS through the bootcamp I went to in Galati,
+                  Romania.
+                </p>
+                <p class="lead">
+                  I went on to complete a couple of courses of Brad Traversy on
+                  Udemy and then started using Bootstrap in my own projects.
+                </p>
+              </div>
             </div>
             <div class="col-12 col-md-6 description-what">
               <h3>What I built with it</h3>
-              <p>
-                Bootstrap Lorem ipsum dolor, sit amet consectetur adipisicing
-                elit. Dolores consequuntur reiciendis quasi nesciunt ipsa rerum
-                unde eum explicabo obcaecati sed.
-              </p>
+
               <ul>
                 <li>project 1</li>
                 <li>project 2</li>
@@ -453,12 +496,222 @@
           <h4 class="text-uppercase fw-bold text-primary">My work</h4>
           <hr class="w-25 mx-auto" />
           <h2 class="mb-4 text-warning">
-            Here you can see some of my faviourite projects to work on
+            Some larger projects that I am most proud of
           </h2>
         </div>
-        <div class="row row_projects">
+        <div class="row_projects">
+          <div class="row projects-display">
+            <!-- project 1 -->
+            <div class="col-md-6 pt-4 project-card">
+              <a
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#project1"
+              >
+                <div class="card">
+                  <img
+                    src="./images/projects/project1-vera.jpg"
+                    class="card-img-top"
+                    alt="Vera project"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Vera Website</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- project 2 -->
+            <div class="col-md-6 pt-4 project-card">
+              <a
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#project2"
+              >
+                <div class="card">
+                  <img
+                    src="./images/projects/project2-multi-step-form.jpg"
+                    class="card-img-top"
+                    alt="Multi-Step Form"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">Multi-Step Form</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <!-- project 3 -->
+            <div class="col-md-6 pt-4 project-card">
+              <a
+                type="button"
+                data-bs-toggle="modal"
+                data-bs-target="#project3"
+              >
+                <div class="card">
+                  <img
+                    src="./images/projects/project3-ecommerce-product-page.jpg"
+                    class="card-img-top"
+                    alt="E-commerce product page"
+                  />
+                  <div class="card-body">
+                    <h5 class="card-title">E-commerce Product Page</h5>
+                    <p class="card-text">
+                      Some quick example text to build on the card title and
+                      make up the bulk of the card's content.
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="projects-content">
+            <!-- project 1 -->
+            <div
+              class="modal fade"
+              id="project1"
+              tabindex="-1"
+              aria-labelledby="project1"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="project1">Vera Website</h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <img src="./images/projects/project1-vera.jpg" alt="" />
+                    <p class="lead pt-3">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Architecto aspernatur odit veniam tempore quo perspiciatis
+                      possimus minus quasi atque quibusdam ipsa, facere expedita
+                      vitae blanditiis, quis eaque, et ea aperiam?
+                    </p>
+                  </div>
+                  <div class="modal-footer d-flex justify-content-center">
+                    <a
+                      type="button"
+                      class="btn btn-secondary btn-preview"
+                      data-bs-dismiss="modal"
+                    >
+                      Preview Project
+                    </a>
+                    <a type="button" class="btn btn-primary btn-github">
+                      GitHub Repo</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- project 2 -->
+            <div
+              class="modal fade"
+              id="project2"
+              tabindex="-1"
+              aria-labelledby="project2"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="project2">Multi-Step Form</h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <img
+                      src="./images/projects/project2-multi-step-form.jpg"
+                      alt=""
+                    />
+                    <p class="lead pt-3">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Architecto aspernatur odit veniam tempore quo perspiciatis
+                      possimus minus quasi atque quibusdam ipsa, facere expedita
+                      vitae blanditiis, quis eaque, et ea aperiam?
+                    </p>
+                  </div>
+                  <div class="modal-footer d-flex justify-content-center">
+                    <a
+                      type="button"
+                      class="btn btn-secondary btn-preview"
+                      data-bs-dismiss="modal"
+                    >
+                      Preview Project
+                    </a>
+                    <a type="button" class="btn btn-primary btn-github">
+                      GitHub Repo</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- project 3 -->
+            <div
+              class="modal fade"
+              id="project3"
+              tabindex="-1"
+              aria-labelledby="project3"
+              aria-hidden="true"
+            >
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="project3">
+                      E-commerce Website
+                    </h5>
+                    <button
+                      type="button"
+                      class="btn-close"
+                      data-bs-dismiss="modal"
+                      aria-label="Close"
+                    ></button>
+                  </div>
+                  <div class="modal-body">
+                    <img
+                      src="./images/projects/project3-ecommerce-product-page.jpg"
+                      alt=""
+                    />
+                    <p class="lead pt-3">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Architecto aspernatur odit veniam tempore quo perspiciatis
+                      possimus minus quasi atque quibusdam ipsa, facere expedita
+                      vitae blanditiis, quis eaque, et ea aperiam?
+                    </p>
+                  </div>
+                  <div class="modal-footer d-flex justify-content-center">
+                    <a
+                      type="button"
+                      class="btn btn-secondary btn-preview"
+                      data-bs-dismiss="modal"
+                    >
+                      Preview Project
+                    </a>
+                    <a type="button" class="btn btn-primary btn-github">
+                      GitHub Repo</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <!-- project 1 -->
-          <div class="col-md-6 mb-4 d-flex justify-content-center">
+          <!-- <div class="col-md-6 mb-4 d-flex justify-content-center">
             <div class="card w-75 shadow-sm card-custom" data-project="1">
               <img
                 src="./images/projects/project1-vera.jpg"
@@ -474,9 +727,9 @@
                 </p>
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- project 2 -->
-          <div class="col-md-6 mb-4 d-flex justify-content-center">
+          <!-- <div class="col-md-6 mb-4 d-flex justify-content-center">
             <div class="card w-75 shadow-sm card-custom" data-project="2">
               <img
                 src="./images/projects/project2-multi-step-form.jpg"
@@ -492,9 +745,9 @@
                 </p>
               </div>
             </div>
-          </div>
+          </div> -->
           <!-- project 3 -->
-          <div class="col-md-6 mb-4 d-flex justify-content-center">
+          <!-- <div class="col-md-6 mb-4 d-flex justify-content-center">
             <div class="card w-75 shadow-sm card-custom" data-project="3">
               <img
                 src="./images/projects/project3-ecommerce-product-page.jpg"
@@ -510,12 +763,12 @@
                 </p>
               </div>
             </div>
-          </div>
+          </div> -->
         </div>
 
-        <div class="modals_container">
-          <!-- project 1 - Vera -->
-          <div
+        <!-- <div class="modals_container"> -->
+        <!-- project 1 - Vera -->
+        <!-- <div
             class="my_modal project-1 text-start bg-light display-none"
             data-modal="1"
           >
@@ -544,12 +797,12 @@
               <a href="#" class="btn btn-warning">Project Preview</a>
               <a href="#" class="btn btn-secondary">GitHub Repo</a>
             </div>
-            <!-- <small>Press Esc to close</small> -->
-          </div>
+            <small>Press Esc to close</small>
+          </div> -->
 
-          <!-- project 2 - Multi step form -->
+        <!-- project 2 - Multi step form -->
 
-          <div
+        <!-- <div
             class="my_modal project-1 text-start bg-light display-none"
             data-modal="2"
           >
@@ -578,11 +831,11 @@
               <a href="#" class="btn btn-warning">Project Preview</a>
               <a href="#" class="btn btn-secondary">GitHub Repo</a>
             </div>
-          </div>
+          </div> -->
 
-          <!-- project 2 - E-commerce product page -->
+        <!-- project 3 - E-commerce product page -->
 
-          <div
+        <!-- <div
             class="my_modal project-1 text-start bg-light display-none"
             data-modal="3"
           >
@@ -612,8 +865,8 @@
               <a href="#" class="btn btn-warning">Project Preview</a>
               <a href="#" class="btn btn-secondary">GitHub Repo</a>
             </div>
-          </div>
-        </div>
+          </div> -->
+        <!-- </div> -->
       </div>
 
       <div class="my_overlay display-none"></div>
@@ -637,9 +890,9 @@
             <h3 class="fs-3 text-react-custom">React</h3>
             <hr class="w-25 mx-auto" />
             <p class="fs-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad iste
-              commodi, optio voluptates cumque dignissimos hic a. Iste, modi
-              consequatur!
+              I am currently working on completing a React course by Jonas
+              Schmedtmann and at the time of writing this I am learning about
+              the useReducer hook.
             </p>
           </div>
           <div class="col-md-6 text-center learning-component">
@@ -647,9 +900,7 @@
             <h3 class="fs-3 text-php-custom">PHP</h3>
             <hr class="w-25 mx-auto" />
             <p class="fs-5">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad iste
-              commodi, optio voluptates cumque dignissimos hic a. Iste, modi
-              consequatur!
+              Currently working on completing the PHP Course of Jannis Seemann.
             </p>
           </div>
         </div>
@@ -721,55 +972,30 @@
     </section>
     <!-- Dev Blog end -->
 
-    <!-- Contact section start -->
-    <section id="contact" class="contact text-bg-dark bg-gradient py-5">
+    <section id="contact" class="contact text-bg-dark py-5">
       <div class="container">
-        <div class="row">
-          <h4 class="text-center">Contact Me</h4>
-
-          <p>
-            I'm excited to connect with potential employers and collaborators.
-            Should you like to get in touch, feel free to fill out the contact
-            form or send me an email directly. I'll get back to you as soon as
-            possible.
-          </p>
-        </div>
-        <div class="row">
-          <div class="col-md-6 d-flex justify-content-center">
-            <button class="btn btn-primary">Contact Form</button>
-          </div>
-          <div class="col-md-6 d-flex justify-content-center">
-            <button class="btn btn-primary">Send me an email</button>
-          </div>
-        </div>
-        <!-- Contact section end -->
-
         <!-- Footer -->
         <div class="d-flex mt-5">
-          <p class="flex-grow-1">Copyright &copy; 2023 | Design by Daniel</p>
+          <p class="flex-grow-1">Coded by Daniel 2024</p>
           <div class="hstack gap-3">
-            <a class="text-decoration-none" href="#">
-              <i class="fab fa-facebook fa-2x text-white"></i>
-            </a>
-            <a class="text-decoration-none" href="#">
-              <i class="fab fa-twitter fa-2x text-white"></i>
-            </a>
-            <a class="text-decoration-none" href="#">
-              <i class="fab fa-instagram fa-2x text-white"></i>
-            </a>
             <a class="text-decoration-none" href="#">
               <i class="fab fa-linkedin fa-2x text-white"></i>
             </a>
             <a class="text-decoration-none" href="#">
-              <i class="fab fa-dribbble fa-2x text-white"></i>
+              <i class="fa-brands fa-square-github text-white fa-2x"></i>
             </a>
           </div>
         </div>
       </div>
     </section>
     <div class="side-buttons">
-      <!-- contact form button -->
-      <div class="form-button">
+      <!-- button to open the form modal -->
+      <div
+        type="button"
+        class="form-modal-btn"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
         <i class="fa-solid fa-message"></i>
       </div>
 
@@ -779,47 +1005,74 @@
       </div>
     </div>
 
-    <div class="contact-form">
-      <!-- contact form -->
-      <form class="contact_form display-none" action="">
-        <div class="mb-5">
-          <input
-            type="text"
-            class="form-control bg-transparent border-top-0 border-start-0 border-end-0 rounded-0 border-muted text-white first-input"
-            placeholder="Full Name"
-          />
+    <!-- <div class="contact-form"> -->
+    <!-- contact form -->
+    <div
+      class="modal fade"
+      id="exampleModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Contact Me</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <form class="modal-form" action="process_form.php">
+              <!-- Full Name -->
+              <div class="mb-3">
+                <label for="full-name" class="form-label">Full Name:</label>
+                <input type="text" class="form-control" />
+              </div>
+              <!-- Company Name -->
+              <div class="mb-3">
+                <label for="company-name" class="form-label"
+                  >Company Name:</label
+                >
+                <input type="text" class="form-control" />
+              </div>
+              <!-- Email -->
+              <div class="mb-3">
+                <label for="email" class="form-label">Email:</label>
+                <input type="email" class="form-control" />
+              </div>
+              <!-- Message -->
+              <div class="mb-3">
+                <label for="message" class="form-label">Your message:</label>
+                <textarea
+                  name="message"
+                  id="message"
+                  class="form-control"
+                ></textarea>
+              </div>
+              <div class="mb-3 action-buttons">
+                <input
+                  type="submit"
+                  value="Submit"
+                  class="btn btn-primary submit-btn"
+                />
+                <input
+                  type="button"
+                  value="Cancel"
+                  class="btn btn-secondary cancel-btn"
+                />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer"></div>
         </div>
-
-        <div class="mb-5">
-          <input
-            type="text"
-            class="form-control bg-transparent border-top-0 border-start-0 border-end-0 rounded-0 border-muted text-white"
-            placeholder="Company Name"
-          />
-        </div>
-
-        <div class="mb-5">
-          <input
-            type="email"
-            class="form-control bg-transparent border-top-0 border-start-0 border-end-0 rounded-0 border-muted text-white"
-            placeholder="Email"
-          />
-        </div>
-
-        <div class="mb-5">
-          <textarea
-            class="form-control bg-transparent border-top-0 border-start-0 border-end-0 rounded-0 border-muted text-white"
-            placeholder="Message"
-          ></textarea>
-        </div>
-        <div class="mb-5 d-grid">
-          <button type="submit" class="btn btn-primary submit-custom">
-            Submit
-          </button>
-        </div>
-      </form>
-      <!-- contact form -->
+      </div>
     </div>
+    <!-- contact form -->
+    <!-- </div> -->
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/lightbox-plus-jquery.min.js"></script>

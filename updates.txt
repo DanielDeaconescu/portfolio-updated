@@ -1,0 +1,15 @@
+1. create a logo for DanielDev (done)
+2. replace the background image of the header with just a color (done)
+3. on max-width of 576px, I want to see the icons of github, codewars and frontend mentor displayed in line (done)
+4. write the introduction (done)
+5. write the "tabbed-component" (done)
+    5.1 re-build the tabbed component, it has a bug
+6. in the portfolio section, use a bootstrap 5 card for each project (done)
+    6.1 use a bootstrap modal for the form as well (done)
+    6.2 re-do the form from scratch
+    6.2 make sure that the X button does not have a border around it when clicked
+    6.3 implement the form functionality in "process_form.php"
+    6.4 whenever the form is closed (Escape, X, Cancel, clicking outside), it should also reset
+7. for the "currently-learning", write some info regarding what I currently learn specifically in React & PHP
+8. try to build the blog section based on Brad's tutorial
+9. think of other elements to put inside the footer
