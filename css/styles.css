@@ -79,6 +79,8 @@ select {
   --clr-purple: #9290c3;
   --clr-react: #61dbfb;
   --clr-php: #777bb3;
+  --clr-react: hsl(192, 95%, 68%);
+  --clr-node: rgb(60, 135, 58);
   --clr-html-logo: #e34c26;
   --clr-js-logo: #f0db4f;
   --clr-php-logo: #8993be;
@@ -248,6 +250,7 @@ select {
   padding-top: 20px;
   background-color: var(--clr-dark);
   color: #fff;
+  height: 600px;
 }
 
 .container-descriptions {
@@ -295,8 +298,8 @@ select {
   color: var(--clr-php-logo);
 }
 
-.bs-custom {
-  color: var(--clr-bs-logo);
+.react-custom {
+  color: var(--clr-react);
 }
 
 .css-custom {
@@ -364,16 +367,16 @@ select {
   border-right: 1px solid white;
 }
 
-.icon-react-custom {
-  color: var(--clr-react);
+.icon-node-custom {
+  color: var(--clr-node);
 }
 
 .icon-php-custom {
   color: var(--clr-php);
 }
 
-.text-react-custom {
-  color: var(--clr-react);
+.text-node-custom {
+  color: var(--clr-node);
 }
 
 .text-php-custom {

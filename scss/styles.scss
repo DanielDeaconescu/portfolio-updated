@@ -89,6 +89,8 @@ select {
   --clr-purple: #9290c3;
   --clr-react: #61dbfb;
   --clr-php: #777bb3;
+  --clr-react: hsl(192, 95%, 68%);
+  --clr-node: rgb(60, 135, 58);
 
   // colors of logos
   --clr-html-logo: #e34c26;
@@ -279,6 +281,7 @@ select {
   padding-top: 20px;
   background-color: var(--clr-dark);
   color: #fff;
+  height: 600px;
 }
 
 .container-descriptions {
@@ -329,8 +332,8 @@ select {
   color: var(--clr-php-logo);
 }
 
-.bs-custom {
-  color: var(--clr-bs-logo);
+.react-custom {
+  color: var(--clr-react);
 }
 
 .css-custom {
@@ -484,16 +487,16 @@ select {
   border-right: 1px solid white;
 }
 
-.icon-react-custom {
-  color: var(--clr-react);
+.icon-node-custom {
+  color: var(--clr-node);
 }
 
 .icon-php-custom {
   color: var(--clr-php);
 }
 
-.text-react-custom {
-  color: var(--clr-react);
+.text-node-custom {
+  color: var(--clr-node);
 }
 
 .text-php-custom {
@@ -520,7 +523,7 @@ select {
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 102;
-  background-color: hsla(209, 33, 27, 1);
+  background-color: hsla(209, 33%, 27%, 1);
   padding: var(--size-700);
   border-radius: 20px;
 }
@@ -552,7 +555,7 @@ select {
 // }
 
 .submit-custom {
-  background-color: hsl(208, 33, 9) !important;
+  background-color: hsl(208, 33%, 9%) !important;
 }
 
 // Contact form end (Modal)

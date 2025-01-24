@@ -4,12 +4,19 @@
 4. write the introduction (done)
 5. write the "tabbed-component" (done)
     5.1 re-build the tabbed component, it has a bug
+    5.2 on the mobile, each tab must be in-line and only have the icon shown 
 6. in the portfolio section, use a bootstrap 5 card for each project (done)
     6.1 use a bootstrap modal for the form as well (done)
-    6.2 re-do the form from scratch
+    6.2 re-do the form from scratch (done) - needs some improvements
     6.2 make sure that the X button does not have a border around it when clicked
     6.3 implement the form functionality in "process_form.php"
     6.4 whenever the form is closed (Escape, X, Cancel, clicking outside), it should also reset
+    6.5 fix the problem with "Preview Project"
 7. for the "currently-learning", write some info regarding what I currently learn specifically in React & PHP
-8. try to build the blog section based on Brad's tutorial
+8. try to build the blog section with PHP based on Brad's tutorial
 9. think of other elements to put inside the footer
+10. implement the navigation seen in Kevin's video
+11. create a white version of "codewars" and "github" logos
+12. implement a section under the blog with "completed courses" and list the completed courses
+13. Finish building the CV that will be downloaded with "Download resume"
+14. Re-do the tabbed component
