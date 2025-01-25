@@ -256,3 +256,15 @@ backToTopButton.addEventListener("click", function () {
     behavior: "smooth",
   });
 });
+
+function windowScroll() {
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 50) {
+      backToTopButton.classList.remove("no-display");
+    } else {
+      backToTopButton.classList.add("no-display");
+    }
+  });
+}
+
+document.addEventListener("DOMContentLoaded", windowScroll);

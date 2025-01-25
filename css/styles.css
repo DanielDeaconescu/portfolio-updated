@@ -281,6 +281,9 @@ select {
     transform: translateY(-35%);
     background-color: var(--clr-lighter);
   }
+  .learning-component:not(:last-child) {
+    border-right: 1px solid white;
+  }
 }
 .html-custom {
   color: var(--clr-html-logo);
@@ -361,10 +364,6 @@ select {
   background-color: rgba(0, 0, 0, 0.7);
 }
 
-.learning-component:not(:last-child) {
-  border-right: 1px solid white;
-}
-
 .icon-node-custom {
   color: var(--clr-node);
 }
@@ -414,14 +413,24 @@ select {
   background-color: hsl(208, 33%, 9%) !important;
 }
 
-.side-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  color: var(--clr-white);
+.form-modal-btn {
   position: fixed;
+  right: 2%;
+  bottom: 25%;
+  color: var(--clr-white);
+}
+
+.back-to-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--clr-dark);
+  padding: 0.75rem;
+  border-radius: 50%;
+  position: fixed;
+  right: 2%;
   bottom: 5%;
-  right: 2.5%;
+  color: var(--clr-white);
 }
 
 .form-button {
@@ -435,15 +444,6 @@ select {
   bottom: 12.5%;
   right: 2.5%;
   z-index: 11;
-}
-
-.back-to-top {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: var(--clr-dark);
-  padding: 0.75rem;
-  border-radius: 50%;
 }
 
 .form-button:hover,
@@ -698,4 +698,7 @@ select {
   .description-what {
     flex: 1;
   }
+}
+.no-display {
+  display: none;
 }

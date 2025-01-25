@@ -19,5 +19,6 @@
 11. create a white version of "codewars" and "github" logos
 12. implement a section under the blog with "completed courses" and list the completed courses
 13. Finish building the CV that will be downloaded with "Download resume"
-14. Re-do the tabbed component
-    14.1 use a .container for wrapping the tabs and the descriptions
+14. Re-do the tabbed component (done)
+    14.1 use a .container for wrapping the tabs and the descriptions (done)
+15. implement the functionality of the "back-to-top" button
