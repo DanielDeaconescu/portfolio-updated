@@ -670,7 +670,7 @@ select {
   }
 }
 
-@media (max-width: 769px) {
+@media (min-width: 578px) and (max-width: 769px) {
   .navbar-custom {
     padding: 0;
   }
@@ -715,18 +715,215 @@ select {
     max-width: 100% !important;
   }
 
-  // tabs component
-  .tabs-container :nth-last-child(1) {
-    padding-top: 0.625rem;
+  // tabbed component
+  .tabbed-component {
+    height: 500px;
   }
 
-  .tabs-container :nth-last-child(2) {
-    padding-top: 0.625rem;
+  .description {
+    flex-direction: column;
+    padding: 0 5rem;
+  }
+
+  .tabs-container {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    padding: 0 5rem;
+  }
+
+  .tab {
+    flex: 1;
+  }
+
+  .description-how-title,
+  .description-what-title {
+    font-size: 1.4rem;
+  }
+
+  .description p {
+    font-size: 1rem;
+    text-align: justify;
   }
 }
 
-@media (min-width: 770px) {
+@media (min-width: 770px) and (max-width: 992px) {
   .navbar-custom {
     padding: 0 50px;
+  }
+
+  // tabbed component
+  .tabbed-component {
+    height: 480px;
+  }
+
+  .description {
+    flex-direction: column;
+    padding: 0 7.5rem;
+  }
+
+  .tabs-container {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    padding: 0 7.5rem;
+  }
+
+  .tab {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .tab-text {
+    display: block;
+  }
+
+  .description p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  // tabbed component
+  .tabbed-component {
+    height: 480px;
+  }
+
+  .description {
+    flex-direction: row;
+    padding: 0 7.5rem;
+    gap: 3rem;
+  }
+
+  .tabs-container {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    padding: 0 7.5rem;
+  }
+
+  .tab {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .tab-text {
+    display: block;
+  }
+
+  .description p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .description-how {
+    flex: 2;
+    padding-right: 1rem;
+    border-right: 1px solid white;
+  }
+
+  .description-what {
+    flex: 1;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+  // tabbed component
+  .tabbed-component {
+    height: 480px;
+  }
+
+  .description {
+    flex-direction: row;
+    padding: 0 8.5rem;
+    gap: 3rem;
+  }
+
+  .tabs-container {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    padding: 0 8.5rem;
+  }
+
+  .tab {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .tab-text {
+    display: block;
+  }
+
+  .description p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .description-how {
+    flex: 2;
+    padding-right: 1rem;
+    border-right: 1px solid white;
+  }
+
+  .description-what {
+    flex: 1;
+  }
+}
+
+@media (min-width: 1401px) {
+  // tabbed component
+  .tabbed-component {
+    height: 450px;
+  }
+
+  .description {
+    flex-direction: row;
+    padding: 0 12.5rem;
+    gap: 3rem;
+  }
+
+  .tabs-container {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    padding: 0 12.5rem;
+  }
+
+  .tab {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .tab-text {
+    display: block;
+  }
+
+  .description p {
+    font-size: 1rem;
+    text-align: justify;
+  }
+
+  .description-how {
+    flex: 2;
+    padding-right: 1rem;
+    border-right: 1px solid white;
+  }
+
+  .description-what {
+    flex: 1;
   }
 }
