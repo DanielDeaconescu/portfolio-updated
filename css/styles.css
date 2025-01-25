@@ -477,7 +477,7 @@ select {
 
 @media (max-width: 577px) {
   .tabbed-component {
-    height: 520px;
+    height: 650px;
   }
   .description {
     flex-direction: column;
@@ -494,10 +494,10 @@ select {
   }
   .description-how-title,
   .description-what-title {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
   .description p {
-    font-size: 0.8rem;
+    font-size: 1rem;
     text-align: justify;
   }
 }
