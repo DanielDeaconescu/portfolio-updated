@@ -253,10 +253,6 @@ select {
   height: 600px;
 }
 
-.container-descriptions {
-  padding: 0 0 2rem 0;
-}
-
 .bootstrap-container {
   position: relative;
 }
@@ -481,13 +477,11 @@ select {
   }
   .description {
     flex-direction: column;
-    padding: 0 2rem;
   }
   .tabs-container {
     display: flex;
     gap: 0.5rem;
     justify-content: center;
-    padding: 0 2rem;
   }
   .tab {
     flex: 1;
@@ -541,13 +535,11 @@ select {
   }
   .description {
     flex-direction: column;
-    padding: 0 5rem;
   }
   .tabs-container {
     display: flex;
     gap: 0.5rem;
     justify-content: center;
-    padding: 0 5rem;
   }
   .tab {
     flex: 1;
@@ -570,13 +562,11 @@ select {
   }
   .description {
     flex-direction: column;
-    padding: 0 7.5rem;
   }
   .tabs-container {
     display: flex;
     gap: 0.5rem;
     justify-content: center;
-    padding: 0 7.5rem;
   }
   .tab {
     flex: 1;
@@ -599,14 +589,12 @@ select {
   }
   .description {
     flex-direction: row;
-    padding: 0 7.5rem;
     gap: 3rem;
   }
   .tabs-container {
     display: flex;
     gap: 0.5rem;
     justify-content: center;
-    padding: 0 7.5rem;
   }
   .tab {
     flex: 1;
@@ -637,14 +625,12 @@ select {
   }
   .description {
     flex-direction: row;
-    padding: 0 8.5rem;
     gap: 3rem;
   }
   .tabs-container {
     display: flex;
     gap: 0.5rem;
     justify-content: center;
-    padding: 0 8.5rem;
   }
   .tab {
     flex: 1;
@@ -675,14 +661,12 @@ select {
   }
   .description {
     flex-direction: row;
-    padding: 0 12.5rem;
     gap: 3rem;
   }
   .tabs-container {
     display: flex;
     gap: 0.5rem;
     justify-content: center;
-    padding: 0 12.5rem;
   }
   .tab {
     flex: 1;
