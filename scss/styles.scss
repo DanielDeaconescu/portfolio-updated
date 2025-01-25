@@ -355,18 +355,12 @@ select {
   display: flex;
 }
 
-.description-how {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+.tab-text {
+  display: none;
 }
 
-.description-what {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+.tab_active {
+  transform: translateY(-45%);
 }
 
 // Tabbed component end
@@ -644,16 +638,35 @@ select {
 
 // Media Queries
 @media (max-width: 577px) {
-  .description-how {
-    border-bottom: 1px solid white;
-  }
-  // tabs component
-  .tabs-container {
-    gap: 0.3125rem;
+  // tabbed component
+  .tabbed-component {
+    height: 520px;
   }
 
-  .container-descriptions {
+  .description {
+    flex-direction: column;
+    padding: 0 2rem;
+  }
+
+  .tabs-container {
+    display: flex;
+    gap: 0.5rem;
     justify-content: center;
+    padding: 0 2rem;
+  }
+
+  .tab {
+    flex: 1;
+  }
+
+  .description-how-title,
+  .description-what-title {
+    font-size: 1.2rem;
+  }
+
+  .description p {
+    font-size: 0.8rem;
+    text-align: justify;
   }
 }
 
@@ -713,10 +726,6 @@ select {
 }
 
 @media (min-width: 770px) {
-  .description-how {
-    border-right: 1px solid white;
-  }
-
   .navbar-custom {
     padding: 0 50px;
   }

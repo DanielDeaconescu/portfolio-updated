@@ -309,150 +309,118 @@
     <!-- Profile & skills end -->
 
     <!-- Tabbed component start  -->
-    <section id="my-skills" class="tabbed-component">
-      <div class="container">
-        <div class="row pb-2 tabs-container">
-          <div class="col-sm-6 col-md-3 d-grid">
-            <button class="tab tab_active w-100" data-tech="1">
-              <i class="fa-brands fa-html5 pe-1 html-custom"></i>
-              HTML & CSS
-            </button>
+    <section class="tabbed-component">
+      <div class="tabs-container">
+        <button class="tab tab_active" data-tech="1">
+          <i class="fa-brands fa-html5 pe-1 html-custom"></i>
+          <span class="tab-text">HTML & CSS</span>
+        </button>
+        <button class="tab" data-tech="2">
+          <i class="fa-brands fa-node-js pe-1 js-custom"></i>
+          <span class="tab-text">JavaScript</span>
+        </button>
+        <button class="tab" data-tech="3">
+          <i class="fa-brands fa-react pe-1 react-custom"></i>
+          <span class="tab-text">React</span>
+        </button>
+        <button class="tab" data-tech="4">
+          <i class="fa-brands fa-php pe-1 php-custom"></i>
+          <span class="tab-text">PHP</span>
+        </button>
+      </div>
+      <div class="container-descriptions">
+        <div class="description description-active" data-tech="1">
+          <div class="description-how">
+            <h3 class="description-how-title">How I learned it</h3>
+            <p>
+              I picked up HTML & CSS from a bootcamp at a local web development
+              company in Galati, Romania.
+            </p>
+            <p>
+              I went in with a little bit of prior knowledge (codecademy course)
+              and it was an awesome learning experience.
+            </p>
+            <p>
+              The fact that I was able to complete the final project (building a
+              website starting from just a Photoshop document) helped me build
+              up confidence and I went on to learning JavaScript on my own.
+            </p>
           </div>
-          <div class="col-sm-6 col-md-3 d-grid">
-            <button class="tab w-100" data-tech="2">
-              <i class="fa-brands fa-node-js pe-1 js-custom"></i>
-              JavaScript
-            </button>
-          </div>
-          <div class="col-sm-6 col-md-3 d-grid">
-            <button class="tab w-100" data-tech="3">
-              <i class="fa-brands fa-php pe-1 php-custom"></i>
-              PHP
-            </button>
-          </div>
-          <div class="col-sm-6 col-md-3 d-grid">
-            <button class="tab w-100" data-tech="4">
-              <i class="fa-brands fa-react pe-1 react-custom"></i>
-              React
-            </button>
+          <div class="description-what">
+            <h3 class="description-what-title">What I built with it</h3>
+            <ul>
+              <li>project 1</li>
+              <li>project 2</li>
+              <li>project 3</li>
+            </ul>
           </div>
         </div>
-        <div class="row container-descriptions">
-          <!-- HTML description start -->
-          <div class="description description-active row" data-tech="1">
-            <div class="col-md-6 description-how">
-              <h3>How I learned it</h3>
-              <div class="description-how-text px-3">
-                <p class="lead">
-                  I picked up HTML & CSS from a bootcamp at a local web
-                  development company in Galati, Romania.
-                </p>
-                <p class="lead">
-                  I went in with a little bit of prior knowledge (codecademy
-                  course) and it was an awesome learning experience.
-                </p>
-                <p class="lead">
-                  The fact that I was able to complete the final project
-                  (building a website starting from just a Photoshop document)
-                  helped me build up confidence and I went on to learning
-                  JavaScript on my own.
-                </p>
-              </div>
-            </div>
-            <!-- <div class="vertical-line"></div> -->
-            <div class="col-md-6 description-what">
-              <h3>What I built with it</h3>
 
-              <!-- <ul>
-                <li>project 1</li>
-                <li>project 2</li>
-                <li>project 3</li>
-              </ul> -->
-              <h4>Coming soon...</h4>
-            </div>
+        <div class="description" data-tech="2">
+          <div class="description-how">
+            <h3 class="description-how-title">How I learned it</h3>
+            <p>
+              I mainly picked up the basics of JavaScript from the Udemy courses
+              of Jonas Schmedtmann and Andrei Neagoie.
+            </p>
+            <p>
+              I went on to building my own projects and experiment with the
+              things I learned through courses and I discovered learning can be
+              really fun.
+            </p>
           </div>
-          <!-- HTML description end -->
-          <!-- JavaScript description start -->
-          <div class="description row" data-tech="2">
-            <div class="col-md-6 description-how">
-              <h3>How I learned it</h3>
-              <div class="description-how-text px-3">
-                <p class="lead">
-                  I mainly picked up the basics of JavaScript from the Udemy
-                  courses of Jonas Schmedtmann and Andrei Neagoie.
-                </p>
-                <p class="lead">
-                  I went on to building my own projects and experiment with the
-                  things I learned through courses and I discovered learning can
-                  be really fun.
-                </p>
-              </div>
-            </div>
-            <div class="col-md-6 description-what">
-              <h3>What I built with it</h3>
-              <!-- <ul>
-                <li>project 1</li>
-                <li>project 2</li>
-                <li>project 3</li>
-              </ul> -->
-              <h4>Coming soon...</h4>
-            </div>
+          <div class="description-what">
+            <h3 class="description-what-title">What I built with it</h3>
+            <ul>
+              <li>project 1</li>
+              <li>project 2</li>
+              <li>project 3</li>
+            </ul>
           </div>
-          <!-- JavaScript description end -->
-          <!-- PHP description start -->
-          <div class="description row" data-tech="3">
-            <div class="col-12 col-md-6 description-how">
-              <h3>How I learned it</h3>
-              <div class="description-how-text px-3">
-                <p class="lead">
-                  I picked up the basics of PHP from Brad Traversy on YouTube
-                  and through the Udemy course of Jannis Seemann.
-                </p>
-                <p class="lead">
-                  I started liking it more and more as I understood how powerful
-                  it can be.
-                </p>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 description-what">
-              <h3>What I built with it</h3>
-              <!-- <ul>
-                <li>project 1</li>
-                <li>project 2</li>
-                <li>project 3</li>
-              </ul> -->
-              <h4>Coming soon...</h4>
-            </div>
-          </div>
-          <!-- PHP description end -->
+        </div>
 
-          <!-- Bootstrap description start -->
-          <div class="description row" data-tech="4">
-            <div class="col-12 col-md-6 description-how">
-              <h3>How I learned it</h3>
-              <div class="description-how-text px-3">
-                <p class="lead">
-                  I followed Jonas Schmedtmann's React course from Udemy and
-                  picked up the basics quite easily.
-                </p>
-                <p class="lead">
-                  As I moved forward with the course, I started liking React
-                  more and more and started using it in my projects.
-                </p>
-              </div>
-            </div>
-            <div class="col-12 col-md-6 description-what">
-              <h3>What I built with it</h3>
-
-              <!-- <ul>
-                <li>project 1</li>
-                <li>project 2</li>
-                <li>project 3</li>
-              </ul> -->
-              <h4>Coming soon...</h4>
-            </div>
+        <div class="description" data-tech="3">
+          <div class="description-how">
+            <h3 class="description-how-title">How I learned it</h3>
+            <p>
+              I followed Jonas Schmedtmann's React course from Udemy and picked
+              up the basics quite easily.
+            </p>
+            <p>
+              As I moved forward with the course, I started liking React more
+              and more and started using it in my projects.
+            </p>
           </div>
-          <!-- Bootstrap description end -->
+          <div class="description-what">
+            <h3 class="description-what-title">What I built with it</h3>
+            <ul>
+              <li>project 1</li>
+              <li>project 2</li>
+              <li>project 3</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="description" data-tech="4">
+          <div class="description-how">
+            <h3 class="description-how-title">How I learned it</h3>
+            <p>
+              I picked up the basics of PHP from Brad Traversy on YouTube and
+              through the Udemy course of Jannis Seemann.
+            </p>
+            <p>
+              I started liking it more and more as I understood how powerful it
+              can be.
+            </p>
+          </div>
+          <div class="description-what">
+            <h3 class="description-what-title">What I built with it</h3>
+            <ul>
+              <li>project 1</li>
+              <li>project 2</li>
+              <li>project 3</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>

@@ -139,21 +139,23 @@ document.addEventListener("keydown", function (e) {
 });
 
 // tabbed component functionality
-allTabs.forEach((tab) => {
-  tab.addEventListener("click", function (e) {
-    const clickedTab = e.target.dataset.tech;
-    allTabs.forEach((tab) => tab.classList.remove("tab_active"));
-    document
-      .querySelector(`.tab[data-tech="${clickedTab}"]`)
-      .classList.add("tab_active");
-    // descriptions
-    allDescriptions.forEach((description) =>
-      description.classList.remove("description-active")
-    );
-    document
-      .querySelector(`.description[data-tech="${clickedTab}"]`)
-      .classList.add("description-active");
-  });
+const tabsContainer = document.querySelector(".tabs-container");
+const tabs = document.querySelectorAll(".tab");
+const tabsContent = document.querySelectorAll(".description");
+
+tabsContainer.addEventListener("click", function (e) {
+  const clicked = e.target.closest(".tab");
+
+  if (!clicked) return;
+
+  tabs.forEach((e) => e.classList.remove("tab_active"));
+  tabsContent.forEach((c) => c.classList.remove("description-active"));
+
+  clicked.classList.add("tab_active");
+
+  document
+    .querySelector(`.description[data-tech="${clicked.dataset.tech}"]`)
+    .classList.add("description-active");
 });
 
 // scrolling functionality
