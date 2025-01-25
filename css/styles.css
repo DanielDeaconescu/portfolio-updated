@@ -123,6 +123,10 @@ select {
   max-width: 60px;
 }
 
+.custom-icon {
+  font-size: 1.8rem;
+}
+
 .header {
   background-color: #387478;
   background-size: cover;

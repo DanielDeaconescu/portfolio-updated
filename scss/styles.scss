@@ -112,7 +112,7 @@ select {
   --clr-lightest: #2e455b;
 }
 
-// Navigation
+// Navigation start
 .navbar-custom {
   padding: 0;
   background-color: var(--clr-darkest);
@@ -139,6 +139,11 @@ select {
 .logo_img {
   max-width: 60px;
 }
+
+.custom-icon {
+  font-size: 1.8rem;
+}
+
 // navigation end
 
 // header start
