@@ -484,6 +484,12 @@ select {
 }
 
 @media (max-width: 577px) {
+  .about-content {
+    flex-direction: column;
+  }
+  .about-me-paragraph {
+    text-align: justify;
+  }
   .tabbed-component {
     height: 650px;
   }

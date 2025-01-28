@@ -652,6 +652,14 @@ select {
 
 // Media Queries
 @media (max-width: 577px) {
+  // about me
+  .about-content {
+    flex-direction: column;
+  }
+
+  .about-me-paragraph {
+    text-align: justify;
+  }
   // tabbed component
   .tabbed-component {
     height: 650px;

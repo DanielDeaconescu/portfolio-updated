@@ -40,6 +40,14 @@ const options = {
 const headerObserver = new IntersectionObserver(makeNavbarSticky, options);
 headerObserver.observe(header);
 
+// navigation - closing the navigation when clicking outside
+document.addEventListener("click", function (e) {
+  const clickedEl = e.target;
+  if (!navigation.contains(clickedEl)) {
+    document.querySelector(".navbar-collapse").classList.remove("show");
+  }
+});
+
 function runTypingEffect() {
   const text = "I am Daniel Deaconescu";
   const typingElement = document.getElementById("typing-text");
