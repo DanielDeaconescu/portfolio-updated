@@ -1,14 +1,14 @@
 {
-  "name": "bs5-simple-starter",
+  "name": "portfolio-website",
   "version": "1.0.0",
-  "description": "Simple workflow for working with and customizing Bootstrap 5",
+  "description": "My Portfolio Website",
   "main": "index.js",
   "scripts": {
     "sass:build": "sass --no-source-map scss:css",
     "sass:watch": "sass --no-source-map --watch scss:css",
     "build": "npm run sass:build"
   },
-  "author": "Brad Traversy",
+  "author": "Daniel Deaconescu",
   "license": "MIT",
   "devDependencies": {
     "@fortawesome/fontawesome-free": "^6.4.0",
