@@ -76,7 +76,12 @@
               >
             </li>
             <li class="nav-item">
-              <a href="#contact" class="nav-link active link-custom">Contact</a>
+              <a
+                data-bs-toggle="modal"
+                data-bs-target="#contactFormModal"
+                class="nav-link active link-custom navigation-contact-button"
+                >Contact</a
+              >
             </li>
           </ul>
         </div>
@@ -314,7 +319,7 @@
     <!-- Profile & skills end -->
 
     <!-- Tabbed component start  -->
-    <section class="tabbed-component">
+    <section id="my-skills" class="tabbed-component">
       <div class="container tabs-container">
         <button class="tab tab_active" data-tech="1">
           <i class="fa-brands fa-html5 pe-1 html-custom"></i>
@@ -533,7 +538,7 @@
                       <li>HTML & CSS</li>
                       <li>Vanilla JavaScript</li>
                       <li>Bootstrap</li>
-                      <li>PHP (for setting up PHP Mailer)</li>
+                      <li>Node.js (for setting up Nodemailer)</li>
                     </ul>
                   </div>
                   <div class="modal-footer d-flex justify-content-center">
@@ -577,13 +582,17 @@
                     ></button>
                   </div>
                   <div class="modal-body">
-                    <img src="./images/projects/senor-expert-2.jpg" alt="" />
+                    <img
+                      class="image-inside-modal"
+                      src="./images/projects/senor-expert-2.jpg"
+                      alt=""
+                    />
                     <p class="lead pt-3">I build this project with:</p>
                     <ul>
                       <li>React</li>
                       <li>Bootstrap</li>
                       <li>Supabase</li>
-                      <li>PHP (PHP Mailer)</li>
+                      <li>Node.js</li>
                     </ul>
                   </div>
                   <div class="modal-footer d-flex justify-content-center">
@@ -928,7 +937,7 @@
       type="button"
       class="form-modal-btn"
       data-bs-toggle="modal"
-      data-bs-target="#exampleModal"
+      data-bs-target="#contactFormModal"
     >
       <i class="fa-solid fa-message"></i>
     </div>
@@ -942,7 +951,7 @@
     <!-- contact form -->
     <div
       class="modal fade"
-      id="exampleModal"
+      id="contactFormModal"
       tabindex="-1"
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
@@ -1006,7 +1015,7 @@
     </div>
     <!-- contact form -->
     <!-- </div> -->
-    <div class="work-in-progress-info-note text-white bg-dark">
+    <div class="work-in-progress-info-note">
       <span class="closing-button"><i class="fa-solid fa-xmark"></i></span>
       <h4 class="popup-title">
         <span>⚒</span>

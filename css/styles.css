@@ -127,6 +127,10 @@ select {
   font-size: 1.8rem;
 }
 
+.navigation-contact-button {
+  cursor: pointer;
+}
+
 .header {
   background-color: #387478;
   background-size: cover;
@@ -462,6 +466,7 @@ select {
   background-color: var(--clr-dark);
   padding: 0.75rem;
   border-radius: 50%;
+  z-index: 11;
 }
 
 .action-buttons {
@@ -495,32 +500,45 @@ select {
 }
 
 .work-in-progress-info-note {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 0.125rem;
   position: fixed;
-  width: 100%;
-  bottom: 0;
-  z-index: 12;
-  padding: 1rem;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(50, 50, 50, 0.9); /* Dark semi-transparent */
+  color: #f1f1f1; /* Soft white */
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  max-width: 90%;
+  width: 400px;
+  text-align: center;
+  z-index: 1000;
 }
 
-.popup-title {
-  display: flex;
-  gap: 1rem;
+.work-in-progress-info-note .popup-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.work-in-progress-info-note p {
+  margin: 5px 0;
 }
 
 .closing-button {
   position: absolute;
-  top: 1rem;
-  right: 4rem;
+  top: 8px;
+  right: 8px;
+  background: transparent;
+  border: none;
+  color: #bbb;
+  font-size: 18px;
   cursor: pointer;
 }
 
-.work-in-progress-info-note p {
-  margin: 0;
+.closing-button:hover {
+  color: #fff;
 }
 
 @media (max-width: 577px) {
@@ -551,6 +569,14 @@ select {
   .description p {
     font-size: 1rem;
     text-align: justify;
+  }
+  .btn-preview {
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+  .btn-github {
+    font-size: 0.8rem;
+    white-space: nowrap;
   }
 }
 @media (min-width: 578px) and (max-width: 769px) {
