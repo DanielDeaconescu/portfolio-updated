@@ -650,6 +650,50 @@ select {
 
 // Side buttons end
 
+// Styling the Footer start
+
+.logo-copyright-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-logo-link {
+  text-decoration: none;
+}
+
+.work-in-progress-info-note {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.125rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: 12;
+  padding: 1rem;
+}
+
+.popup-title {
+  display: flex;
+  gap: 1rem;
+}
+
+.closing-button {
+  position: absolute;
+  top: 1rem;
+  right: 4rem;
+  cursor: pointer;
+}
+
+.work-in-progress-info-note p {
+  margin: 0;
+}
+
+// Styling the Footer end
+
 // Media Queries
 @media (max-width: 577px) {
   // about me

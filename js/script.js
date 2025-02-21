@@ -257,6 +257,22 @@ const checkIfFormIsOpen = function () {
 //     : navigation.classList.remove("display-none");
 // });
 
+// Closing Prompt Functionality
+const workInProgressPrompt = document.querySelector(
+  ".work-in-progress-info-note"
+);
+const closingButton = document.querySelector(".closing-button");
+
+if (localStorage.getItem("workInProgressClosed") === "true") {
+  workInProgressPrompt.classList.add("d-none");
+}
+
+closingButton.addEventListener("click", function () {
+  workInProgressPrompt.classList.add("d-none");
+
+  localStorage.setItem("workInProgressClosed", "true");
+});
+
 // Back to top functionality
 backToTopButton.addEventListener("click", function () {
   window.scrollTo({
