@@ -10,6 +10,7 @@
       sizes="32x32"
       href="./images/logo_light.png"
     />
+
     <!-- Devicon -->
     <link
       rel="stylesheet"
@@ -29,7 +30,7 @@
     />
     <link rel="stylesheet" href="css/font-awesome.css" />
     <link rel="stylesheet" href="css/bootstrap.css" />
-    <link rel="stylesheet" href="css/lightbox.min.css" />
+    <!-- <link rel="stylesheet" href="css/lightbox.min.css" /> -->
     <link rel="stylesheet" href="css/styles.css" />
     <link
       rel="stylesheet"
@@ -47,7 +48,7 @@
             src="images/logo_light.png"
             class="img-fluid logo_img"
             alt=""
-          />Daniel Test
+          />Daniel Dev
         </a>
         <button
           type="button"
@@ -968,23 +969,23 @@
             ></button>
           </div>
           <div class="modal-body">
-            <form class="modal-form" action="process_form.php">
+            <form class="modal-form" action="submit-form.php" method="POST">
               <!-- Full Name -->
               <div class="mb-3">
                 <label for="full-name" class="form-label">Full Name:</label>
-                <input type="text" class="form-control" />
+                <input type="text" name="full-name" class="form-control" />
               </div>
               <!-- Company Name -->
               <div class="mb-3">
                 <label for="company-name" class="form-label"
                   >Company Name:</label
                 >
-                <input type="text" class="form-control" />
+                <input type="text" name="company-name" class="form-control" />
               </div>
               <!-- Email -->
               <div class="mb-3">
                 <label for="email" class="form-label">Email:</label>
-                <input type="email" class="form-control" />
+                <input type="email" name="email" class="form-control" />
               </div>
               <!-- Message -->
               <div class="mb-3">
@@ -995,6 +996,22 @@
                   class="form-control"
                 ></textarea>
               </div>
+              <div class="mb-3">
+                <!-- Cloudflare Turnstile -->
+                <div
+                  class="cf-turnstile"
+                  data-sitekey="0x4AAAAAAA90SaGxCdp35TsZ"
+                  data-theme="light"
+                  data-callback="setTurnstileResponse"
+                ></div>
+              </div>
+              <!-- Hidden input for Turnstile response -->
+              <input
+                type="hidden"
+                name="cf-turnstile-response"
+                id="cf-turnstile-response"
+              />
+
               <div class="mb-3 action-buttons">
                 <input
                   type="submit"
@@ -1034,9 +1051,22 @@
       </p>
       <p>Last updated on: 21 February 2025</p>
     </div>
-
+    <!-- Turnstile JS -->
+    <script
+      src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+      async
+      defer
+    ></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/lightbox-plus-jquery.min.js"></script>
     <script src="js/script.js"></script>
+
+    <script>
+      // Callback function for Turnstile response
+      function setTurnstileResponse(token) {
+        // Set the token value into the hidden input field
+        document.getElementById("cf-turnstile-response").value = token;
+      }
+    </script>
   </body>
 </html>
